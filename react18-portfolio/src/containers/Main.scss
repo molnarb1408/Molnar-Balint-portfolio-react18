@@ -1,0 +1,7 @@
+@use "../_globalColor" as colors;
+
+.dark-mode {
+  background-color: colors.$darkBackground;
+  color: white;
+  transition: 0s;
+}
