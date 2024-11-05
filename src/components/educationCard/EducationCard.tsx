@@ -1,12 +1,12 @@
 import "./EducationCard.scss";
 import { Fade, Slide } from "react-awesome-reveal";
-import { useStyle } from "../../contexts/StyleContext"; 
+import { useStyle } from "../../contexts/StyleContext";
 import { useRef } from "react";
 import { EducationCardProps } from "../../types/EducationCard.types";
 
 export default function EducationCard({ school }: EducationCardProps) {
   const imgRef = useRef<HTMLImageElement>(null);
-  const { isDark } = useStyle(); 
+  const { isDark } = useStyle();
 
   const GetDescBullets = ({ descBullets }: { descBullets?: string[] }) => (
     <>
@@ -25,7 +25,7 @@ export default function EducationCard({ school }: EducationCardProps) {
 
   return (
     <div>
-      <Fade direction="left" duration={1000} triggerOnce>
+      <Fade direction="left" duration={1000} className="education-card" triggerOnce>
         <div className="education-card">
           {school.logo && (
             <div className="education-card-left">
@@ -64,7 +64,7 @@ export default function EducationCard({ school }: EducationCardProps) {
         </div>
       </Fade>
 
-      <Slide direction="left" duration={2000} delay={1000} triggerOnce>
+      <Slide direction="left" duration={2000} delay={1000} triggerOnce className="education-card-border">
         <div className="education-card-border"></div>
       </Slide>
     </div>
