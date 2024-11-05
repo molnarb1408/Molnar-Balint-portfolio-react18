@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import App from "./App"; // Az App komponenst importáld
+import App from "./App"; 
 
 jest.mock("lottie-react", () => {
   return function MockLottie(props) {
-    return <div>{props.children}</div>; // Visszaad egy egyszerű div-et
+    return <div>{props.children}</div>; 
   };
 });
 
@@ -27,6 +27,5 @@ beforeAll(() => {
 
 test('renders without crashing', () => {
   render(<App />);
-  // Ellenőrzés...
 });
 
