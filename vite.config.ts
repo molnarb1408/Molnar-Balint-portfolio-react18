@@ -8,27 +8,27 @@ export default defineConfig({
     outDir: 'build',
     rollupOptions: {
       output: {
-        entryFileNames: 'static/js/[name].js',
-        chunkFileNames: 'static/js/[name].js',
+        entryFileNames: 'static/js/[name].[hash].js', 
+        chunkFileNames: 'static/js/[name].[hash].js', 
         assetFileNames: (assetInfo) => {
           const exts = assetInfo.names ? assetInfo.names.map(name => path.extname(name)) : [];
-          if (exts.length === 0) return 'static/[name][extname]';
+          if (exts.length === 0) return 'static/[name].[hash][extname]';
 
           for (const ext of exts) {
             if (/\.css$/.test(ext)) {
-              return 'static/css/[name][extname]';
+              return 'static/css/[name].[hash][extname]'; 
             }
-            if (/\.png$|\.jpg$|\.jpeg$|\.gif$|\.svg$/.test(ext)) {
-              return 'static/media/images/[name][extname]';
+            if (/\.webp$|\.png$|\.jpg$|\.jpeg$|\.gif$|\.svg$/.test(ext)) {
+              return 'static/media/[name].[hash][extname]'; 
             }
             if (/\.ttf$|\.otf$|\.woff$|\.woff2$/.test(ext)) {
-              return 'static/media/fonts/[name][extname]';
+              return 'static/media/[name].[hash][extname]';
             }
             if (/\.pdf$/.test(ext)) {
-              return 'static/media/pdfs/[name][extname]';
+              return 'static/media/[name].[hash][extname]';
             }
           }
-          return 'static/[name][extname]';
+          return 'static/[name].[hash][extname]';
         }
       }
     }

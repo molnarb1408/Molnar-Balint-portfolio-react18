@@ -7,9 +7,11 @@ import SocialMedia from "../../components/socialMedia/SocialMedia.tsx";
 import Button from "../../components/button/Button.tsx";
 import { illustration, greeting } from "../../portfolio.tsx";
 import { useStyle } from "../../contexts/StyleContext.tsx";
+import CV_hu from './CV_molnarB_HU.pdf';
+import CV_en from './CV_molnarB_EN.pdf';
 
 export default function Greeting() {
-  const { isDark } = useStyle(); 
+  const { isDark } = useStyle();
 
   if (!greeting.displayGreeting) {
     return null;
@@ -43,31 +45,31 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text="Önéletrajz HU"
-                    href={("./CV_molnarB_HU.pdf")}
+                    href={CV_hu}
                     isDownload
-                    downloadFile="CV_molnarB_HU.pdf" className={undefined} newTab={undefined}                  />
+                    downloadFile="CV_molnarB_HU.pdf" className={undefined} newTab={undefined} />
                 )}
                 {greeting.resumeLink && (
                   <Button
                     text="Önéletrajz EN"
-                    href={("./CV_molnarB_EN.pdf")}
+                    href={CV_en}
                     isDownload
-                    downloadFile="CV_molnarB_EN.pdf" className={undefined} newTab={undefined}                  />
+                    downloadFile="CV_molnarB_EN.pdf" className={undefined} newTab={undefined} />
                 )}
               </div>
             </div>
           </div>
           <Fade direction="right" duration={3000} triggerOnce>
-          <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="placeholder"
-                src="../../assets/images/placeholder.webp"
-              ></img>
-            )}
-          </div>
+            <div className="greeting-image-div">
+              {illustration.animated ? (
+                <DisplayLottie animationData={landingPerson} />
+              ) : (
+                <img
+                  alt="placeholder"
+                  src="../../assets/images/placeholder.webp"
+                ></img>
+              )}
+            </div>
           </Fade>
         </div>
       </div>

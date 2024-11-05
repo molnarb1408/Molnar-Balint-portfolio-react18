@@ -128,7 +128,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Pécsi Tudományegyetem",
-      logo: "./assets/images/PTE.webp",
+      logo: new URL("./assets/images/PTE.webp", import.meta.url).href,
       subHeader: "Pénzügy és számvitel",
       duration: "Szeptember 2019 - Június 2022",
       desc: "MNB Kiválósági ösztöndíj nyertese",
@@ -138,7 +138,7 @@ const educationInfo = {
     },
     {
       schoolName: "Pécsi Tudományegyetem",
-      logo: "./assets/images/PTE.webp",
+      logo: new URL("./assets/images/PTE.webp", import.meta.url).href,
       subHeader: "Vállalkozási mérlegképes könyvelő",
       duration: "Szeptember 2019 - Június 2022",
       desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
@@ -153,26 +153,26 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      backgroundColor: [226, 92, 76], 
+      backgroundColor: [226, 92, 76],
       role: "Vállalati weblap készítés",
       company: "Greensense Consulting",
-      companylogo: "./assets/images/greensenseLogo.webp",
+      companylogo: new URL("./assets/images/greensenseLogo.webp", import.meta.url).href,
       date: "2024 Augusztus – 2024 Október",
       desc: "A GreenSense Consulting megbízásából elkészítettem a hívatalos 'GreenSense.hu' weblapot.",
       descBullets: [
-        "Technlogiák: HTML5, CSS3, Bootstrap, JavaScript, PhP, npm",
-        "Informatív, modern sztandardoknak megfelelő design",
+        "Technológiák: HTML5, CSS3, Bootstrap, JavaScript, PHP, npm",
+        "Informatív, modern sztenderdeknek megfelelő design",
         "SEO optimalizáció",
         "Felület készítés, tesztelés, stb.",
       ]
     },
     {
-      backgroundColor: [186, 4, 4], 
+      backgroundColor: [186, 4, 4],
       role: "Eszkalációs Menedzser (logisztika - autóipar)",
       company: "Provertha Zrt.",
-      companylogo: "./assets/images/proverthaLogo.webp",
+      companylogo: new URL("./assets/images/proverthaLogo.webp", import.meta.url).href,
       date: "2023-04 – 2023-12",
-      desc: "Automitive - Logisztika, területén töltöttem be menedzseri munkakört.",
+      desc: "Automotive - Logisztika területén töltöttem be menedzseri munkakört.",
       descBullets: [
         "Növeltem a teljesítményt a napi tevékenységek nyomon követésével és a csapattagok mentorálásával.",
         "Számos feladatot sikeresen elvégeztem a meghatározott határidőkön belül.",
@@ -180,14 +180,14 @@ const workExperiences = {
       ]
     },
     {
-      backgroundColor: [44, 44, 59], 
+      backgroundColor: [44, 44, 59],
       role: "Junior Adótanácsadó",
-      company: "Ernst & Young,",
-      companylogo: "./assets/images/eyLogo.webp",
+      company: "Ernst & Young",
+      companylogo: new URL("./assets/images/eyLogo.webp", import.meta.url).href,
       date: "2022-12 – 2023-03",
       desc: "Junior Adótanácsadó munkakört töltöttem be a pénzügyi-szolgáltatói szektor 'BIG4' egyik meghatározó multinacionális vállalkozásánál.",
       descBullets: [
-        "Figyelemmel kísértem a projekteket, hogy megfeleljenek a jogi és szabályozási előírásoknak,",
+        "Figyelemmel kísértem a projekteket, hogy megfeleljenek a jogi és szabályozási előírásoknak.",
         "Részletes jelentéseket készítettem a megfelelési mutatókról, tájékoztatva a felsővezetést a főbb trendekről és a javításra szoruló területekről.",
       ]
     }
@@ -201,7 +201,7 @@ const bigProjects = {
   subtitle: "NÉHÁNY CÉGEK ÁLTAL MEGRENDELT, ILLETVE SAJÁT KÉSZÍTÉSŰ PROJECT",
   projects: [
     {
-      image: "./assets/images/greenssenseCroppedLogo.webp",
+      image: new URL("./assets/images/greenssenseCroppedLogo.webp", import.meta.url).href,
       projectName: "GreenSense.hu",
       projectDesc: "A GreenSense Consulting tréningeket, workshopokat, előadásokat és egyéb programokat kínál fenntarthatósági és ESG témákban. A cég elkötelezett abban, hogy a fenntarthatóságot a vállalati kultúra szerves részévé tegye. Céljuk, hogy segítsék partnereiket az ESG céljaik és vállalásaik elérésében. Ennek a célnak a nevében készült el egy lehető legjobban a fenntarthatóságra koncentráló weboldal.",
       footerLink: [
@@ -212,7 +212,7 @@ const bigProjects = {
       ]
     },
     {
-      image: "./assets/images/placeholder.webp",
+      image: new URL("./assets/images/placeholder.webp", import.meta.url).href,
       projectName: "placeholder",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -237,7 +237,7 @@ const achievementSection = {
     {
       title: "Magyar Nemzeti Bank - Kiválósági ösztöndíj",
       subtitle: "Sikeresen megszerzett MNB kíválósági ösztöndíj, kiemelkedő tanulmányi teljesítményért!",
-      image: "./assets/images/mnbLogo.webp",
+      image: new URL("./assets/images/mnbLogo.webp", import.meta.url).href,
       imageAlt: "MNB Logo",
       footerLink: [
         { name: "Ösztöndíj", url: "https://mega.nz/file/8H5wlAIZ#RuKZYqNavUr6ikjAOqbQJkaYb2Sq0mymMB6KlecFaE0" },
@@ -251,7 +251,7 @@ const achievementSection = {
       title: "Ruander - Frontend fejlesztő",
       subtitle:
         "Sikeresen elvégzett Frontend fejlesztői képzés, kiemelkedő 5* eredménnyel!",
-      image: "./assets/images/ruanderLogo.webp",
+      image: new URL("./assets/images/ruanderLogo.webp", import.meta.url).href,
       imageAlt: "Ruander Logo",
       footerLink: [
         {
@@ -264,7 +264,7 @@ const achievementSection = {
       title: "Ruander - Backend fejlesztő",
       subtitle:
         "Folyamatban lévő Backend fejlesztői képzés!",
-      image: "./assets/images/ruanderLogo.webp",
+      image: new URL("./assets/images/ruanderLogo.webp", import.meta.url).href,
       imageAlt: "Ruander Logo",
       footerLink: [
         {
