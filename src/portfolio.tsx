@@ -240,13 +240,13 @@ const bigProjects = {
       ]
     },
     {
-      image: new URL("./assets/images/placeholder.webp", import.meta.url).href,
-      projectName: "placeholder",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: new URL("./assets/images/bossRushDemoLogo.webp", import.meta.url).href,
+      projectName: "Boss Rush - Demo",
+      projectDesc: "Az első nagyobb projektemet Angular-ban valósítottam meg, amely egy körökre osztott játék volt. A kódot teljes mértékben magam írtam, és én terveztem meg az egyszerűbb architektúrát, beleértve a komponensek kapcsolatait és a játék háttérlogikáját. Ezt a projektet mindössze négy hónappal azután készítettem el, hogy elkezdtem programozni életemben először. Bár a kód sok refaktorálást igényel, büszke vagyok rá, hogy képes voltam egy összetettebb projektet létrehozni.",
       footerLink: [
         {
-          name: "Weboldal Megnyítása",
-          url: "http://nextu.se/"
+          name: "Játék Indítása",
+          url: "https://boss-rush-demo.netlify.app"
         }
       ]
     }
