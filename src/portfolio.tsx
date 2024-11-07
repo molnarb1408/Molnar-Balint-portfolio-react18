@@ -150,7 +150,7 @@ const educationInfo = {
     },
     {
       schoolName: "Pécsi Tudományegyetem - JURIDECO Zrt.",
-      logo: new URL("./assets/images/pteLogo2.webp", import.meta.url).href,
+      logo: new URL("./assets/images/pteJuridecoLogo.webp", import.meta.url).href,
       subHeader: "Vállalkozási mérlegképes könyvelő",
       duration: "2019 Szeptember - 2022 Június",
       desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
