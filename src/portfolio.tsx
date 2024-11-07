@@ -19,7 +19,7 @@ const greeting = {
   username: "Molnár Bálint",
   title: "Üdv, Bálint vagyok!",
   subTitle: (
-    "Molnár Bálint vagyok, lelkes és elkötelezett fejlesztő, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a JavaScript, HTML, CSS, Bootstrap, Angular és Node.js, illetve a NoSQL adatbázisok használata. Backend oldalon mélyebben ismerem a SQL, Java, Java Swing és JavaFX technológiákat."
+    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular és Node.js, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing és JavaFX, Maven, SQL technológiák"
   ),
   resumeLink:
     "https://mega.nz/folder/oHoRxABT#3VkrF55q0xR112UNTiBaQg",
@@ -46,12 +46,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Képességeim:",
-  subTitle: "Lelkes fejlesztő, Frontend és Backend tudással!",
+  subTitle: "Fejlesztőként a tanulási képességet kiemelten fontosnak tartom. Ezt igazolandó, egy számomra új technológiát, a React + Vite -t felhasználva készítettem el ezt a portfólióoldalt, hogy bemutassam: nyitott vagyok az új megoldások elsajátítására és a folyamatos önfejlesztésre.",
   skills: [
-    emoji("⚡ Angular Fejlesztő"),
-    emoji("⚡ JAVA Back End fejlesztő"),
-    emoji("⚡ Modern Front End felületek tervezése webes oldalak és applikációk számára"),
-    emoji("⚡ Adatbázis kezelés, SQL - NoSQL megoldások segítségével"),
+    emoji("⚡ Modern frontend felületek tervezése, korszerű eszközökre optimalizálva"),
+    emoji("⚡ SEO optimalizáció implementálása, weboldalak-applikációk számára"),
+    emoji("⚡ Java applikációk tervezése, fejlesztése"),
+    emoji("⚡ Adatbázis kezelés, SQL - NoSQL technologiák segítségével"),
 
   ],
 
@@ -65,10 +65,6 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
@@ -77,8 +73,20 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-angular"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "React",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "sass",
+      fontAwesomeClassname: "fab fa-sass"
+    },
+    {
+      skillName: "bootstrap",
+      fontAwesomeClassname: "fab fa-bootstrap"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git"
     },
     {
       skillName: "npm",
@@ -87,6 +95,10 @@ const skillsSection = {
     {
       skillName: "Java",
       fontAwesomeClassname: "fab fa-java"
+    },
+    {
+      skillName: "nodejs",
+      fontAwesomeClassname: "fab fa-node"
     },
     {
       skillName: "sql-database",
@@ -111,11 +123,11 @@ const techStack = {
     },
     {
       Stack: "Backend",
-      progressPercentage: "65%"
+      progressPercentage: "60%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "67%"
+      progressPercentage: "71%"
     }
   ],
   displayCodersrank: false
@@ -128,19 +140,27 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Pécsi Tudományegyetem",
-      logo: new URL("./assets/images/PTE.webp", import.meta.url).href,
+      logo: new URL("./assets/images/pteLogo.webp", import.meta.url).href,
       subHeader: "Pénzügy és számvitel",
-      duration: "Szeptember 2019 - Június 2022",
+      duration: "2019 Szeptember - 2022 Június",
       desc: "MNB Kiválósági ösztöndíj nyertese",
       descBullets: [
         "Kiemelkedő 5* érdemjeggyel elvégzet alapképzés",
       ]
     },
     {
-      schoolName: "Pécsi Tudományegyetem",
-      logo: new URL("./assets/images/PTE.webp", import.meta.url).href,
+      schoolName: "Pécsi Tudományegyetem - JURIDECO Zrt.",
+      logo: new URL("./assets/images/pteLogo.webp", import.meta.url).href,
       subHeader: "Vállalkozási mérlegképes könyvelő",
-      duration: "Szeptember 2019 - Június 2022",
+      duration: "2019 Szeptember - 2022 Június",
+      desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
+      descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány megszerzése"]
+    },
+    {
+      schoolName: "Vas Megyei SZC Savaria Technikum És Kollégium - Szombathely",
+      logo: new URL("./assets/images/savariaLogo.webp", import.meta.url).href,
+      subHeader: "OKJ: Logisztikai Ügyintéző + Érettségi",
+      duration: "2014 Szeptember - 2018 Május",
       desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
       descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány megszerzése"]
     }
@@ -156,7 +176,7 @@ const workExperiences = {
       backgroundColor: [226, 92, 76],
       role: "Vállalati weblap készítés",
       company: "Greensense Consulting",
-      companylogo: new URL("./assets/images/greensenseLogo.webp", import.meta.url).href,
+      companylogo: new URL("./assets/images/greenssenseCroppedLogo.webp", import.meta.url).href,
       date: "2024 Augusztus – 2024 Október",
       desc: "A GreenSense Consulting megbízásából elkészítettem a hívatalos 'GreenSense.hu' weblapot.",
       descBullets: [
