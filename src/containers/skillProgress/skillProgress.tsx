@@ -10,7 +10,7 @@ export default function StackProgress() {
       <Fade direction="up" duration={500} triggerOnce>
         <div className="skills-container">
           <div className="skills-bar">
-            <h1 className="skills-heading">Fejlesztési 'stack' ismeretek</h1>
+            <h1 className="skills-heading">Fejlesztői ismeretek</h1>
             {techStack.experience.map((exp, i) => {
               const progressStyle = {
                 width: exp.progressPercentage

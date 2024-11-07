@@ -145,25 +145,33 @@ const educationInfo = {
       duration: "2019 Szeptember - 2022 Június",
       desc: "MNB Kiválósági ösztöndíj nyertese",
       descBullets: [
-        "Kiemelkedő 5* érdemjeggyel elvégzet alapképzés",
+        "Kiemelkedő Jeles érdemjeggyel elvégzet alapképzés",
       ]
     },
     {
       schoolName: "Pécsi Tudományegyetem - JURIDECO Zrt.",
-      logo: new URL("./assets/images/pteLogo.webp", import.meta.url).href,
+      logo: new URL("./assets/images/pteLogo2.webp", import.meta.url).href,
       subHeader: "Vállalkozási mérlegképes könyvelő",
       duration: "2019 Szeptember - 2022 Június",
       desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
-      descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány megszerzése"]
+      descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány"]
     },
     {
-      schoolName: "Vas Megyei SZC Savaria Technikum És Kollégium - Szombathely",
+      schoolName: "Sárvári Tinódi Gimnázium",
       logo: new URL("./assets/images/savariaLogo.webp", import.meta.url).href,
+      subHeader: "ECL: Felsőfokú Angol C1 komplex",
+      duration: "2019 November",
+      desc: "Felsőfokú Angol C1 komplex nyelvvizsga megszerzése",
+      descBullets: ["European Consortium for the Certificate of Attainment in Modern Languages (ECL), English C1 komplex nyelvvizsga"]
+    },
+    {
+      schoolName: "Vas Megyei SZC Savaria Technikum és Kollégium",
+      logo: new URL("./assets/images/eclLogo.webp", import.meta.url).href,
       subHeader: "OKJ: Logisztikai Ügyintéző + Érettségi",
-      duration: "2014 Szeptember - 2018 Május",
-      desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
-      descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány megszerzése"]
-    }
+      duration: "2014 Szeptember - 2019 Május",
+      desc: "Logisztikai ügyintéző OKJ és Kereskedelmi ismeretek végzetség megszerzése",
+      descBullets: ["Jeles eredménnyel elvégzett Éretségi és 5* kiemelkedő, OKJ végzetség"]
+    },
   ]
 };
 
@@ -200,7 +208,7 @@ const workExperiences = {
       ]
     },
     {
-      backgroundColor: [44, 44, 59],
+      backgroundColor: [255, 229, 0],
       role: "Junior Adótanácsadó",
       company: "Ernst & Young",
       companylogo: new URL("./assets/images/eyLogo.webp", import.meta.url).href,
