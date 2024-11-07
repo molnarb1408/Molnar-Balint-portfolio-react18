@@ -15,14 +15,14 @@ export default function Skills() {
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
-        <Fade direction="left" duration={1000} triggerOnce>
+        <Fade direction="left" duration={1000} className="skills-image-div" triggerOnce>
           <div className="skills-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
               <img
                 alt="placeholder"
-                src={require("../../assets/images/placeholder.webp")}
+                src={"../../assets/images/placeholder.webp"}
               ></img>
             )}
           </div>

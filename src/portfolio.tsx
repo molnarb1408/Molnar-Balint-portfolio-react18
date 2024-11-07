@@ -324,7 +324,7 @@ const contactInfo = {
   title: emoji("Elérhetőségem ☎️"),
   subtitle:
     "Bármilyen project, munka lehetőség vagy egyéb kérdés esetén keres bátran!",
-  number: "+36-307130207",
+  number: "",
   email_address: "molnar.balint1408@gmail.com"
 };
 
