@@ -65,7 +65,7 @@ export default function EducationCard({ school }: EducationCardProps) {
       </Fade>
 
       <Slide direction="left" duration={2000} delay={1000} triggerOnce className="education-card-border">
-        <div className="education-card-border"></div>
+        <div></div>
       </Slide>
     </div>
   );
