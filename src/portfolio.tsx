@@ -165,7 +165,7 @@ const educationInfo = {
       descBullets: ["European Consortium for the Certificate of Attainment in Modern Languages (ECL), English C1 komplex nyelvvizsga"]
     },
     {
-      schoolName: "Vas Megyei SZC Savaria Technikum és Kollégium",
+      schoolName: "Vas Megyei SZC Savaria Technikum",
       logo: new URL("./assets/images/eclLogo.webp", import.meta.url).href,
       subHeader: "OKJ: Logisztikai Ügyintéző + Érettségi",
       duration: "2014 Szeptember - 2019 Május",
