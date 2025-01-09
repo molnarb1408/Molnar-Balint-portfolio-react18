@@ -40,7 +40,7 @@ export default function GithubProfileCard({ prof }: GithubProfileCardProps) {
             )}
             <div className="opp-div">
               <span className="desc-prof">
-                Nyított állás ajánlatokra: {prof.hireable}
+                Nyitott állás ajánlatokra: {prof.hireable}
               </span>
             </div>
             <SocialMedia />
