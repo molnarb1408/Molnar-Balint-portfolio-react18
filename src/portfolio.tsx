@@ -19,7 +19,7 @@ const greeting = {
   username: "Molnár Bálint",
   title: "Üdv, Bálint vagyok!",
   subTitle: (
-    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular és Node.js, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing és JavaFX, Maven, SQL technológiák"
+    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular és Node.js, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing, JavaFX, Maven, Python és SQL az technológiák."
   ),
   resumeLink:
     "https://mega.nz/folder/oHoRxABT#3VkrF55q0xR112UNTiBaQg",
@@ -95,6 +95,10 @@ const skillsSection = {
     {
       skillName: "Java",
       fontAwesomeClassname: "fab fa-java"
+    },
+    {
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
       skillName: "nodejs",
