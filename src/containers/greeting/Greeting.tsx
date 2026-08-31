@@ -8,7 +8,7 @@ import Button from "../../components/button/Button.tsx";
 import { illustration, greeting } from "../../portfolio.tsx";
 import { useStyle } from "../../contexts/StyleContext.tsx";
 import CV_hu from './CV_Molnar_Balint_HU.pdf';
-import CV_en from './CV_Molnar_Balint_EN.pdf';
+import CV_en from './CV_Molnar_Balint_ENG.pdf';
 
 export default function Greeting() {
   const { isDark } = useStyle();
@@ -54,7 +54,7 @@ export default function Greeting() {
                     text="Önéletrajz EN"
                     href={CV_en}
                     isDownload
-                    downloadFile="CV_Molnar_Balint_EN.pdf" className={undefined} newTab={undefined} />
+                    downloadFile="CV_Molnar_Balint_ENG.pdf" className={undefined} newTab={undefined} />
                 )}
               </div>
             </div>
