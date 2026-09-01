@@ -1,4 +1,4 @@
-import "./AchievementCard.scss";
+import "./AchievementCard.css";
 import { useStyle } from "../../hooks/useStyle";
 import { AchievementCardProps } from "../../types/AchievementCard.types";
 

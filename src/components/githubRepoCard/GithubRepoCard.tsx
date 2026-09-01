@@ -1,4 +1,4 @@
-import "./GithubRepoCard.scss";
+import "./GithubRepoCard.css";
 import { Fade } from "react-awesome-reveal";
 import { formatFileSizeDisplay } from "../../utils";
 import { GithubRepoCardProps } from "../../types/GithubRepo.types"; 

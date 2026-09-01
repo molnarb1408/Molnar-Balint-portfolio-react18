@@ -1,4 +1,4 @@
-import "./ExperienceCard.scss";
+import "./ExperienceCard.css";
 import { ExperienceCardProps } from "../../types/ExperienceCard.types";
 import { useStyle } from "../../hooks/useStyle";
 

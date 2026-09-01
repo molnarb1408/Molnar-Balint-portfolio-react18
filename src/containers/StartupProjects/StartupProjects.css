@@ -1,40 +1,38 @@
-@use "../../_globalColor" as *;
-
 .card-image {
   max-width: 100%;
   height: auto;
   width: 250px;
 }
 .card-title {
-  color: $titleColor;
+  color: var(--title-color);
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0 0;
 }
 .card-subtitle {
-  color: $cardSubtitle;
+  color: var(--card-subtitle);
   font-size: 17px;
   line-height: 1.5rem;
 }
 .project-card {
   display: flex;
   flex-direction: column;
-  background-color: $lightBackground2;
+  background-color: var(--light-background-2);
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border: 1px solid var(--light-border-1);
   justify-content: center;
 }
 .project-card-light {
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  box-shadow: var(--light-box-shadow-dark) 0px 10px 30px -15px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  box-shadow: 0px 10px 30px -15px var(--dark-box-shadow);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.25s ease;
@@ -44,10 +42,10 @@
   text-align: center;
 }
 .project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: var(--light-box-shadow-dark) 0px 20px 30px -10px;
 }
 .project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  box-shadow: 0px 20px 30px -10px var(--dark-box-shadow);
 }
 .project-image {
   position: relative;
@@ -65,8 +63,8 @@
 }
 
 .project-card-footer span.project-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
+  background: var(--button-color);
+  color: var(--light-background-3);
   vertical-align: middle;
   align-items: center;
   border-radius: 4px;

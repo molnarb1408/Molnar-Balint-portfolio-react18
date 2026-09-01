@@ -1,4 +1,4 @@
-import "./Footer.scss";
+import "./Footer.css";
 import { useStyle } from "../../hooks/useStyle";
 
 export default function Footer() {

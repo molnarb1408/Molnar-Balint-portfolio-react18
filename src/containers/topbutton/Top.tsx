@@ -1,4 +1,4 @@
-import "./Top.scss";
+import "./Top.css";
 import { useEffect } from "react";
 
 export default function Top() {

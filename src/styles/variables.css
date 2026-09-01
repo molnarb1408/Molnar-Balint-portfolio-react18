@@ -1,0 +1,96 @@
+/*
+  Global design tokens.
+  This file replaces `_globalColor.scss`. It's imported exactly once,
+  in `src/index.css`, and every other stylesheet reads these tokens
+  via `var(--token-name)` — no per-file import needed, since CSS custom
+  properties defined on :root cascade to the whole document automatically.
+*/
+:root {
+  /* button colors */
+  --button-color: #00645f;
+  --button-hover: #00413d;
+  --top-button-hover: #000000;
+
+  /* text colors - light theme */
+  --title-color: #000000;
+  --text-color: #000000;
+  --sub-title: #868e96;
+  --card-subtitle: #666666;
+  --talk-card-sub-title: #7f8287;
+  --blog-card-title-color: #262626;
+
+  /* text color - dark theme */
+  --text-color-dark: #ffffff;
+
+  /* toggle switch colors */
+  --toggle-check: #2a9438;
+  --toggle-switch-slider-bg: #b1faa8;
+
+  /* githubRepo specific colors */
+  --github-repo-card-language-color-bg: #00ffbf;
+  --github-repo-card-color: rgb(88, 96, 105);
+  --github-repo-card-repo-card-stats-color: rgb(106, 115, 125);
+  --github-repo-card-repo-name-color: rgb(36, 41, 46);
+  --github-profile-card-location-ts: #ffebcd;
+  --github-profile-card-border: #63ffb6;
+
+  /* light background colors */
+  --light-background-1: #b5e4e1;
+  --light-background-2: rgb(255, 255, 255);
+  --light-background-3: #f5f2f4;
+  --blog-card-container-color: #586069;
+
+  /* dark background colors */
+  --dark-background: #171c28;
+
+  /* light theme box shadows */
+  --light-box-shadow-dark: rgba(0, 0, 0, 0.2);
+  --light-box-shadow: rgba(0, 0, 0, 0.1);
+  --light-box-shadow-darker: rgba(0, 0, 0, 0.3);
+
+  /* dark theme box shadows */
+  --dark-box-shadow: #d9dbdf;
+  --dark-box-shadow-2: #ffffff;
+
+  /* linear gradients */
+  --experience-card-blurred-div-lg: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2)
+  );
+  --experience-card-banner-lg: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  );
+
+  /* borders */
+  --progress-bar-background: rgb(243, 239, 239);
+  --light-border-1: rgba(211, 211, 211, 0.397);
+  --education-card-border: #4fc2af;
+
+  /* hovers */
+  --achievement-certificate-card-hover-dark: rgba(255, 255, 255, 0.2);
+  --blog-card-hover-small-color: rgba(255, 255, 255, 0.8);
+  --header-hover-bg: #f4f4f4;
+  --contact-detail-hover-ts: #16ffd8;
+
+  /* misc backgrounds */
+  --progress-bar-span-bg: #28b491;
+  --icon-background: #333;
+  --app-header-bg: #282c34;
+
+  /* misc colors */
+  --skills-color: #00645f;
+  --app-link: #09d3ac;
+
+  /* social media icons */
+  --facebook: #3b5998;
+  --linkedin: #0e76a8;
+  --github: #333;
+  --gitlab: #fca326;
+  --google: #ea4335;
+  --twitter: #1da1f2;
+  --medium: #000;
+  --stackoverflow: #f48024;
+  --instagram: #c13584;
+  --kaggle: #20beff;
+}

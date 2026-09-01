@@ -1,4 +1,4 @@
-import "./Achievement.scss";
+import "./Achievement.css";
 import { Fade } from "react-awesome-reveal";
 import { achievementSection } from "../../portfolio.tsx";
 import { useStyle } from "../../hooks/useStyle";

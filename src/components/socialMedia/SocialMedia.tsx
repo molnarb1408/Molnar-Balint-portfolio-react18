@@ -1,4 +1,4 @@
-import "./SocialMedia.scss";
+import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio.tsx";
 
 export default function socialMedia() {

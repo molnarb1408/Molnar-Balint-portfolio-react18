@@ -1,4 +1,4 @@
-import "./Header.scss";
+import "./Header.css";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.tsx";
 import { useHeadroom } from "../../hooks/useHeadroom";
 import { useStyle } from "../../hooks/useStyle";

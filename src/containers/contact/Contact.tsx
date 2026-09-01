@@ -1,4 +1,4 @@
-import "./Contact.scss";
+import "./Contact.css";
 import { Fade } from "react-awesome-reveal";
 import { illustration, contactInfo } from "../../portfolio.tsx";
 import { useStyle } from "../../hooks/useStyle";

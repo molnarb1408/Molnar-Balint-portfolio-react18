@@ -1,5 +1,3 @@
-@use "../../_globalColor" as *;
-
 #topButton {
   visibility: hidden;
   position: fixed;
@@ -8,7 +6,7 @@
   z-index: 99;
   border: none;
   outline: none;
-  background-color: $buttonColor;
+  background-color: var(--button-color);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -17,6 +15,6 @@
 }
 
 #topButton:hover {
-  background-color: $topButtonHover;
+  background-color: var(--top-button-hover);
   transition: all ease-in-out 0.2s;
 }

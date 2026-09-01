@@ -1,28 +1,26 @@
-@use "../../_globalColor" as *;
-
 .card-image {
   max-width: 100%;
   height: auto;
   width: 250px;
 }
 .card-title {
-  color: $titleColor;
+  color: var(--title-color);
   font-size: 1.375rem;
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0 0;
 }
 .card-subtitle {
-  color: $cardSubtitle;
+  color: var(--card-subtitle);
   font-size: 1.063rem;
   line-height: 1.5rem;
 }
 .certificate-card {
-  background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  background-color: var(--light-background-2);
+  box-shadow: var(--light-box-shadow-dark) 0px 10px 30px -15px;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border: 1px solid var(--light-border-1);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -31,10 +29,10 @@
   text-align: center;
 }
 .certificate-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: var(--light-box-shadow-dark) 0px 20px 30px -10px;
 }
 .dark-mode.certificate-card:hover {
-  box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
+  box-shadow: var(--achievement-certificate-card-hover-dark) 0px 20px 30px -10px;
 }
 .certificate-image-div {
   position: relative;
@@ -56,8 +54,8 @@
   justify-content: center;
 }
 .certificate-card-footer span.certificate-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
+  background: var(--button-color);
+  color: var(--light-background-3);
   vertical-align: middle;
   align-items: center;
   border-radius: 4px;
@@ -73,5 +71,5 @@
   transition: 0.2s ease-in;
 }
 span.certificate-tag:hover {
-  background: $buttonHover;
+  background: var(--button-hover);
 }

@@ -1,9 +1,7 @@
-@use "../../_globalColor" as *;
-
 .repo-card-div {
-  color: $githubRepoCardColor;
-  background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  color: var(--github-repo-card-color);
+  background-color: var(--light-background-2);
+  box-shadow: var(--light-box-shadow-dark) 0px 10px 30px -15px;
   padding: 2rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -11,7 +9,7 @@
   transition: all 0.3s ease;
 }
 .repo-card-div:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: var(--light-box-shadow-dark) 0px 20px 30px -10px;
 }
 
 .repo-stats {
@@ -19,7 +17,7 @@
   -webkit-box-pack: justify;
   justify-content: space-between;
   font-size: 13px;
-  color: $githubRepoCardRepoCardStatsColor;
+  color: var(--github-repo-card-repo-card-stats-color);
 }
 
 .repo-left-stat {
@@ -31,7 +29,7 @@
 .language-color {
   width: 10px;
   height: 10px;
-  background-color: $githubRepoCardLanguageColorBG;
+  background-color: var(--github-repo-card-language-color-bg);
   margin-right: 0.25rem;
   border-radius: 100%;
 }
@@ -56,7 +54,7 @@
 .repo-name {
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: $githubRepoCardRepoNameColor;
+  color: var(--github-repo-card-repo-name-color);
   margin-bottom: 0.75rem;
   font-size: 25px;
   font-weight: 700;
@@ -78,18 +76,18 @@
 }
 
 .dark-card-mode {
-  background-color: $darkBackground;
-  color: $textColorDark;
+  background-color: var(--dark-background);
+  color: var(--text-color-dark);
 }
 .dark-card-mode p {
-  color: $textColorDark;
+  color: var(--text-color-dark);
 }
 
 .dark-card-mode .repo-svg {
-  fill: $textColorDark;
+  fill: var(--text-color-dark);
 }
 
 .dark-card-mode:hover {
-  background-color: $buttonColor !important;
-  box-shadow: 0px 0px 16px $darkBoxShadow;
+  background-color: var(--button-color) !important;
+  box-shadow: 0px 0px 16px var(--dark-box-shadow);
 }

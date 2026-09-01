@@ -1,4 +1,4 @@
-import "./StartupProjects.scss";
+import "./StartupProjects.css";
 import { bigProjects } from "../../portfolio.tsx";
 import { Fade } from "react-awesome-reveal";
 import { useStyle } from "../../hooks/useStyle";

@@ -1,4 +1,4 @@
-import "./TalkCard.scss";
+import "./TalkCard.css";
 import { TalkCardProps } from "../../types/TalkCard.types";
 
 export default function TalkCard({ talkDetails }: TalkCardProps) {

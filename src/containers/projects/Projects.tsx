@@ -1,4 +1,4 @@
-import "./Project.scss";
+import "./Project.css";
 import { openSource, socialMediaLinks } from "../../portfolio";
 import { useStyle } from "../../hooks/useStyle";
 import { lazy, Suspense, useEffect, useState } from "react";

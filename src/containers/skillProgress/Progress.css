@@ -1,9 +1,7 @@
-@use "../../_globalColor" as *;
-
 .meter {
   height: 20px;
   position: relative;
-  background: $progressBarBackground;
+  background: var(--progress-bar-background);
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -15,7 +13,7 @@
   border-bottom-right-radius: 6px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: $progressBarSpanBG;
+  background-color: var(--progress-bar-span-bg);
   position: relative;
   overflow: hidden;
 }

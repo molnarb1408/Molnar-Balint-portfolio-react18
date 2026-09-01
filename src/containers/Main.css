@@ -1,0 +1,5 @@
+.dark-mode {
+  background-color: var(--dark-background);
+  color: white;
+  transition: 0s;
+}

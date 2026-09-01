@@ -1,4 +1,4 @@
-import "./Progress.scss";
+import "./Progress.css";
 import { illustration, techStack } from "../../portfolio.tsx";
 import { Fade } from "react-awesome-reveal";
 import Build from "../../assets/lottie/build.json";

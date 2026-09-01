@@ -1,4 +1,4 @@
-import "./Skills.scss";
+import "./Skills.css";
 import { Fade } from "react-awesome-reveal";
 import { illustration, skillsSection } from "../../portfolio.tsx";
 import { useStyle } from "../../hooks/useStyle";

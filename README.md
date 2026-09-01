@@ -53,6 +53,21 @@ Deployed automatically via Netlify on push to `main`. Node version is pinned via
 
 All notable changes to this project are documented in this file.
 
+## [0.4.0] - 2026-09-01
+
+### Removed
+- Full SCSS → native CSS migration: all 25 `.scss` files converted to `.css`
+- `_globalColor.scss` → `src/styles/variables.css` (CSS custom properties, `:root`)
+- Removed `sass-embedded` dependency
+- Removed `.scss` extension from the `format` / `check-format` npm script glob patterns
+
+### Changed
+- Updated all component/container `.tsx` imports from `.scss` to `.css`
+- Design tokens (colors, shadows, gradients) are now loaded once, centrally (`index.css` → `styles/variables.css`), instead of being imported per-file via `@use`
+
+### Notes
+- Visual appearance and functionality unchanged — only the styling implementation was refactored
+
 ## [0.3.0] - 2026-09-01
 
 ### Major dependency upgrades

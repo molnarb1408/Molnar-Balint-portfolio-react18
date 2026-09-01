@@ -1,4 +1,4 @@
-import "./Education.scss";
+import "./Education.css";
 import EducationCard from "../../components/educationCard/EducationCard.tsx";
 import {educationInfo} from "../../portfolio.tsx";
 

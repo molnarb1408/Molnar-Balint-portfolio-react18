@@ -1,4 +1,4 @@
-import "./EducationCard.scss";
+import "./EducationCard.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import { useStyle } from "../../hooks/useStyle";
 import { useRef } from "react";

@@ -15,7 +15,7 @@ import SplashScreen from "./splashScreen/SplashScreen.tsx";
 import { splashScreen } from "../portfolio.tsx";
 import { StyleProvider } from "../contexts/StyleProvider.tsx";
 import { useLocalStorage } from "../hooks/useLocalStorage.tsx";
-import "./Main.scss"; //it must load last to make itt work!!!
+import "./Main.css"; //it must load last to make itt work!!!
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");

@@ -1,4 +1,4 @@
-import './App.scss'
+import './App.css'
 import Main from "./containers/Main.tsx";
 
 function App() {

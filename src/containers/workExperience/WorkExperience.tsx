@@ -1,4 +1,4 @@
-import "./WorkExperience.scss";
+import "./WorkExperience.css";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.tsx";
 import { workExperiences } from "../../portfolio.tsx";
 import { Fade } from "react-awesome-reveal";

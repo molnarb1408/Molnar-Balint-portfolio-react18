@@ -1,13 +1,11 @@
-@use "../../_globalColor" as *;
-
 .profile-image {
   border-radius: 50%;
-  border: 0.5rem solid $githubProfileCardBorder;
+  border: 0.5rem solid var(--github-profile-card-border);
   margin-left: auto;
   width: 100%;
   max-width: 350px;
   height: auto;
-  box-shadow: $lightBoxShadow 0 30px 30px -30px;
+  box-shadow: var(--light-box-shadow) 0 30px 30px -30px;
   transition: all 0.3s ease-out;
 }
 
@@ -22,7 +20,7 @@
 }
 
 .location-div {
-  text-shadow: $githubProfileCardLocationTS;
+  text-shadow: var(--github-profile-card-location-ts);
 }
 
 .opp-div {
@@ -55,7 +53,7 @@
 }
 
 .subTitle {
-  color: $subTitle;
+  color: var(--sub-title);
 }
 
 @media (max-width: 768px) {
@@ -93,7 +91,7 @@
   }
 
   .profile-image:hover {
-    box-shadow: $lightBoxShadow 0 50px 50px -50px;
+    box-shadow: var(--light-box-shadow) 0 50px 50px -50px;
     transition: 0.3s ease-out;
   }
 

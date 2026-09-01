@@ -1,4 +1,4 @@
-import "./SoftwareSkill.scss";
+import "./SoftwareSkill.css";
 import {skillsSection} from "../../portfolio.tsx";
 
 export default function SoftwareSkill() {

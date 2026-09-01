@@ -1,5 +1,3 @@
-@use "../../_globalColor" as *;
-
 .dev-icons {
   padding-left: 0;
   list-style: none;
@@ -16,16 +14,16 @@
 }
 
 .software-skill-inline > i {
-  color: $subTitle;
+  color: var(--sub-title);
 }
 
 .software-skill-inline > i:hover {
-  color: $skillsColor;
+  color: var(--skills-color);
 }
 .software-skill-inline > p {
-  color: $subTitle;
+  color: var(--sub-title);
   font-size: 13.5px;
 }
 .software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+  color: var(--skills-color);
 }

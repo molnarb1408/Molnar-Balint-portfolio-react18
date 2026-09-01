@@ -1,4 +1,4 @@
-import "./GithubProfileCard.scss";
+import "./GithubProfileCard.css";
 import SocialMedia from "../socialMedia/SocialMedia.tsx";
 import { contactInfo, isHireable } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";

@@ -1,4 +1,4 @@
-import "./ToggleSwitch.scss";
+import "./ToggleSwitch.css";
 import React, { useState } from "react";
 import { useStyle } from "../../hooks/useStyle";
 

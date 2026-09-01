@@ -1,5 +1,3 @@
-@use "../../_globalColor" as *;
-
 .switch {
   position: relative;
   display: inline-block;
@@ -19,7 +17,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $toggleSwitchSliderBG;
+  background-color: var(--toggle-switch-slider-bg);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -31,17 +29,17 @@ input {
   width: 28px;
   left: 0;
   bottom: 0;
-  background-color: $textColorDark;
+  background-color: var(--text-color-dark);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: $toggleCheck;
+  background-color: var(--toggle-check);
 }
 
 input:focus + .slider {
-  box-shadow: $toggleCheck;
+  box-shadow: var(--toggle-check);
 }
 
 input:checked + .slider::before,

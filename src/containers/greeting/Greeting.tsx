@@ -1,4 +1,4 @@
-import "./Greeting.scss";
+import "./Greeting.css";
 import { Fade } from "react-awesome-reveal";
 import landingPerson from "../../assets/lottie/landingPerson.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";

@@ -1,4 +1,4 @@
-import "./Button.scss";
+import "./Button.css";
 import { ButtonProps } from "./Button.types";
 
 export default function Button({
