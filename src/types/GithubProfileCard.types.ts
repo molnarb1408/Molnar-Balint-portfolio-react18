@@ -1,10 +1,9 @@
 export interface GithubProfile {
   bio: string;
-  location: string | null; 
+  location: string | null;
   avatarUrl: string;
   name: string;
-  hireable?: string; 
-  id?: string; 
+  id?: string;
 }
 
 export interface GithubProfileCardProps {

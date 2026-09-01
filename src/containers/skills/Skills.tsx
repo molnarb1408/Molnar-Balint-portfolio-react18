@@ -22,8 +22,8 @@ export default function Skills() {
             ) : (
               <img
                 alt="placeholder"
-                src={"../../assets/images/placeholder.webp"}
-              ></img>
+                src={new URL("../../assets/images/placeholder.webp", import.meta.url).href}
+              />
             )}
           </div>
         </Fade>

@@ -10,9 +10,9 @@ const GithubProfileCard = lazy(() =>
 );
 
 export default function Profile() {
-  const [prof, setRepo] = useState<GithubProfile | null>(null); 
+  const [prof, setRepo] = useState<GithubProfile | null>(null);
 
-  function setProfileFunction(profileData: GithubProfile | null) { 
+  function setProfileFunction(profileData: GithubProfile | null) {
     setRepo(profileData);
   }
 
@@ -33,8 +33,7 @@ export default function Profile() {
             console.error(
               `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
             );
-            setProfileFunction(null); 
-            openSource.showGithubProfile = "false";
+            setProfileFunction(null);
           });
       };
       getProfileData();

@@ -56,8 +56,9 @@ export default function Contact() {
               <DisplayLottie animationData={email} />
             ) : (
               <img
-                alt="Man working"
-              ></img>
+                alt="Man Working"
+                src={new URL("../../assets/images/placeholder.webp", import.meta.url).href}
+              />
             )}
           </div>
         </div>

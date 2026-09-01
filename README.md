@@ -27,13 +27,79 @@ npm run format      # format with Prettier
 ## Project Structure
 
 ```
-src/
-├── components/     # reusable UI pieces (Button, Header, cards, etc.)
-├── containers/     # page sections (Greeting, Skills, Education, Projects, ...)
-├── contexts/       # StyleContext (dark/light mode)
-├── hooks/          # useLocalStorage, useHeadroom
-├── types/          # shared TypeScript types
-└── portfolio.tsx   # all content/config for the site lives here
+react18-portfolio/
+├── public/
+│   ├── favicon.ico, favicon-16x16.png, favicon-32x32.png
+│   ├── apple-touch-icon.png, safari-pinned-tab.svg
+│   ├── manifest.json
+│   └── profile.json            # GitHub API adatok (fetch.js generálja)
+├── src/
+│   ├── App.tsx / App.css
+│   ├── index.tsx / index.css
+│   ├── portfolio.tsx           # Tartalmi konfiguráció (szövegek, linkek)
+│   ├── utils.tsx
+│   ├── vite-env.d.ts
+│   ├── logo.svg
+│   ├── assets/
+│   │   ├── fonts/               # Agustina.woff, Montserrat-Regular.ttf
+│   │   ├── images/               # webp logók, placeholder.webp, talksCardBack.svg
+│   │   └── lottie/               # splashAnimation, landingPerson, codingPerson, build, email .json
+│   ├── components/
+│   │   ├── achievementCard/     # AchievementCard.tsx / .css
+│   │   ├── button/               # Button.tsx / .css
+│   │   ├── displayLottie/        # DisplayLottie.tsx
+│   │   ├── educationCard/        # EducationCard.tsx / .css
+│   │   ├── experienceCard/       # ExperienceCard.tsx / .css
+│   │   ├── footer/               # Footer.tsx / .css
+│   │   ├── githubProfileCard/    # GithubProfileCard.tsx / .css
+│   │   ├── githubRepoCard/       # GithubRepoCard.tsx / .css
+│   │   ├── header/               # Header.tsx / .css
+│   │   ├── socialMedia/          # SocialMedia.tsx / .css
+│   │   ├── softwareSkills/       # SoftwareSkill.tsx / .css
+│   │   ├── talkCard/             # TalkCard.tsx / .css
+│   │   └── ToggleSwitch/         # ToggleSwitch.tsx / .css
+│   ├── containers/
+│   │   ├── Main.tsx / Main.css   # Fő layout, dark mode állapot
+│   │   ├── achievement/          # Achievement.tsx / .css
+│   │   ├── contact/              # Contact.tsx / .css
+│   │   ├── education/            # Education.tsx / .css
+│   │   ├── greeting/             # Greeting.tsx / .css + CV PDF-ek (HU/EN)
+│   │   ├── loading/              # Loading.tsx / loading.css
+│   │   ├── profile/              # Profile.tsx
+│   │   ├── projects/             # Projects.tsx / Project.css
+│   │   ├── skillProgress/        # skillProgress.tsx / Progress.css
+│   │   ├── skills/               # Skills.tsx / Skills.css
+│   │   ├── splashScreen/         # SplashScreen.tsx / .css
+│   │   ├── StartupProjects/      # StartupProject.tsx / .css
+│   │   ├── topbutton/            # Top.tsx / .css
+│   │   └── workExperience/       # WorkExperience.tsx / .css
+│   ├── contexts/
+│   │   ├── StyleContext.tsx
+│   │   └── StyleProvider.tsx
+│   ├── hooks/
+│   │   ├── useHeadroom.tsx
+│   │   ├── useLocalStorage.tsx
+│   │   └── useStyle.tsx
+│   ├── styles/
+│   │   ├── variables.css         # Globális CSS custom property-k (design tokenek)
+│   │   └── shared.css            # Közös, több komponens közt duplikált osztályok (.subTitle, .card-title, .card-subtitle, .card-image)
+│   └── types/
+│       ├── AchievementCard.types.ts
+│       ├── Button.types.ts
+│       ├── EducationCard.types.ts
+│       ├── ExperienceCard.types.ts
+│       ├── GithubProfileCard.types.ts
+│       ├── GithubRepo.types.ts
+│       ├── StyleContextType.ts
+│       └── TalkCard.types.ts
+├── Dockerfile
+├── fetch.js                      # GitHub GraphQL + Medium RSS adatlekérő build előtt
+├── index.html
+├── netlify.toml
+├── package.json
+├── vite.config.ts
+├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
+└── eslint.config.js
 ```
 
 Section content (text, links, images, skills, work experience, etc.) is configured centrally in `src/portfolio.tsx` — no need to touch component code to update the content.
@@ -44,14 +110,38 @@ Deployed automatically via Netlify on push to `main`. Node version is pinned via
 
 ## Roadmap
 
-- [ ] Migrate all styling from SCSS to native CSS
+- [x] Migrate all styling from SCSS to native CSS
+- [x] Replace remaining `any` types with proper typings
+- [x] Fix any errors and dead code
 - [ ] Code-split large bundle (Lottie / animation-heavy chunks)
-- [ ] Replace remaining `any` types with proper typings
+- [ ] Update project 
 
 
 # Changelog
 
 All notable changes to this project are documented in this file.
+
+## [0.4.1] - 2026-09-01
+
+### Fixed
+- `Footer.tsx`: both `<p>` elements were empty, rendering a functionally invisible footer — content added back
+- `Contact.tsx`: fallback `<img>` (shown when `illustration.animated === false`) was missing a `src`, resulting in a broken image — now uses `new URL(..., import.meta.url).href` for the placeholder asset, consistent with `skillProgress.tsx`
+- `Greeting.tsx`, `Skills.tsx`: fallback placeholder `<img src="../../assets/images/placeholder.webp">` used a raw relative path instead of a Vite-resolved URL, which can point to a stale/incorrect path after build hashing — switched to `new URL(..., import.meta.url).href`
+- `Footer.css`: the unscoped, global `.dark-mode` rule (with `!important`) could collide with the intentionally global `.dark-mode` wrapper rule in `Main.css` and leak onto unrelated elements — scoped it to `.dark-mode.footer-text`
+- `Profile.tsx`: removed a runtime mutation of the imported `openSource` module object (`openSource.showGithubProfile = "false"`) inside the fetch error handler — an anti-pattern that also had no functional effect, since the render branch already short-circuits on `prof !== null`
+
+### Removed
+- `GithubProfileCard.types.ts`: dropped the unused `hireable?: string` field from the `GithubProfile` interface (the component actually reads the `isHireable` boolean from `portfolio.tsx`, never this field)
+
+### Changed
+- Extracted CSS classes duplicated verbatim across multiple stylesheets into a single shared file, `src/styles/shared.css` (imported once in `index.css`):
+  - `.subTitle` — previously redefined identically in `App.css`, `Achievement.css`, `GithubProfileCard.css`, `Greeting.css` (twice, including an internal duplicate), `Skills.css`, and `StartupProjects.css`
+  - `.card-title`, `.card-subtitle`, `.card-image` — previously redefined identically in `AchievementCard.css` and `StartupProjects.css`
+- `Greeting.css`: removed a duplicated `.greeting-main { display: flex; }` block that was declared twice in the same file
+- Kept the `!important`-overridden `.subTitle` in `Contact.css` as-is (intentional override, not a duplicate)
+
+### Notes
+- No visual or functional changes — this release is a bugfix + dead-code/structural cleanup pass only
 
 ## [0.4.0] - 2026-09-01
 

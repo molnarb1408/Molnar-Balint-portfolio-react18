@@ -3,10 +3,6 @@
   color: var(--sub-title) !important;
 }
 
-.dark-mode {
-  color: var(--text-color-dark) !important;
-}
-
 .footer-div {
   margin-top: 2rem;
   padding-bottom: 1rem;
