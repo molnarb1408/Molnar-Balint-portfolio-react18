@@ -1,9 +1,11 @@
 import "./Project.scss";
-import Button from "../../components/button/Button";
 import { openSource, socialMediaLinks } from "../../portfolio";
 import { useStyle } from "../../contexts/StyleContext";
-import Loading from "../loading/Loading";
 import { lazy, Suspense, useEffect, useState } from "react";
+import { GithubRepo } from "../../types/GithubRepo.types";
+import Loading from "../loading/Loading";
+import Button from "../../components/button/Button";
+
 
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
@@ -11,7 +13,7 @@ export default function Projects() {
   );
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
-  const [repo, setrepo] = useState<any[]>([]);
+  const [repo, setrepo] = useState<GithubRepo[]>([]);
   const { isDark } = useStyle();
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export default function Projects() {
     getRepoData();
   }, []);
 
-  function setrepoFunction(array: any[] | string) {
+  function setrepoFunction(array: GithubRepo[] | string) {
     if (typeof array === "string") {
       setrepo([]);
     } else {
@@ -53,7 +55,7 @@ export default function Projects() {
         <div className="main" id="opensource">
           <h1 className="project-title">GitHub - Publikus Prejectek</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v: any, i: number) => {
+            {repo.map((v: GithubRepo, i: number) => {
               if (!v) {
                 console.error(
                   `Github Object for repository number : ${i} is undefined`

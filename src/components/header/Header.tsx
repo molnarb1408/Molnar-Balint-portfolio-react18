@@ -4,6 +4,9 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.tsx";
 import { useStyle } from "../../contexts/StyleContext";
 import { greeting, workExperiences, skillsSection, openSource, achievementSection, resumeSection } from "../../portfolio.tsx";
 
+// CJS/ESM interop workaround Vite 8 alatt:
+const HeadroomComponent = (Headroom as unknown as { default?: typeof Headroom }).default ?? Headroom;
+
 function Header() {
   const { isDark } = useStyle();
   const viewExperience: boolean = workExperiences.display;
@@ -13,7 +16,7 @@ function Header() {
   const viewResume: boolean = resumeSection.display;
 
   return (
-    <Headroom>
+    <HeadroomComponent>
       <header className={isDark ? "dark-menu header" : "header"}>
         <a href="/" className="logo">
           <span className="grey-color"> &lt;</span>
@@ -58,14 +61,13 @@ function Header() {
             <a href="#contact">Elérhetőségem</a>
           </li>
           <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
               <ToggleSwitch />
             </a>
           </li>
         </ul>
       </header>
-    </Headroom>
+    </HeadroomComponent>
   );
 }
 export default Header;

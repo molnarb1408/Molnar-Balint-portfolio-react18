@@ -8,7 +8,7 @@ export default function StartupProject() {
     if (!url) {
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win?.focus();
   }
 

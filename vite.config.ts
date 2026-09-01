@@ -4,13 +4,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler'
-      }
-    }
-  },
   build: {
     outDir: 'build',
     rollupOptions: {

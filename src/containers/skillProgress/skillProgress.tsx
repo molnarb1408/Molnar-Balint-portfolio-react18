@@ -32,7 +32,7 @@ export default function StackProgress() {
             ) : (
               <img
                 alt="placeholder"
-                src={require("../../assets/images/placeholder.webp")}
+                src={new URL("../../assets/images/placeholder.webp", import.meta.url).href}
               />
             )}
           </div>
