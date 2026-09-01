@@ -6,7 +6,8 @@ import { GithubProfileCardProps } from "../../types/GithubProfileCard.types.ts";
 
 
 export default function GithubProfileCard({ prof }: GithubProfileCardProps) {
-  prof.hireable = isHireable ? "Igen!" : "Nem!"; 
+  const hireableText = isHireable ? "Igen!" : "Nem!";
+  
   return (
     <Fade direction="up" duration={800} triggerOnce>
       <div className="main" id="contact">
@@ -39,7 +40,7 @@ export default function GithubProfileCard({ prof }: GithubProfileCardProps) {
             )}
             <div className="opp-div">
               <span className="desc-prof">
-                Nyitott állás ajánlatokra: {prof.hireable}
+                Nyitott állás ajánlatokra: {hireableText}
               </span>
             </div>
             <SocialMedia />

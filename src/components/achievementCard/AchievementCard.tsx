@@ -1,5 +1,5 @@
-import { useStyle } from "../../contexts/StyleContext";
 import "./AchievementCard.scss";
+import { useStyle } from "../../hooks/useStyle";
 import { AchievementCardProps } from "../../types/AchievementCard.types";
 
 export default function AchievementCard({ cardInfo }: AchievementCardProps) {

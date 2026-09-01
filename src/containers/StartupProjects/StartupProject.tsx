@@ -1,7 +1,7 @@
 import "./StartupProjects.scss";
 import { bigProjects } from "../../portfolio.tsx";
 import { Fade } from "react-awesome-reveal";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 
 export default function StartupProject() {
   function openUrlInNewTab(url?: string) {

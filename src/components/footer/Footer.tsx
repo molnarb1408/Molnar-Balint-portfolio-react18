@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import { useStyle } from "../../contexts/StyleContext";
+import { useStyle } from "../../hooks/useStyle";
 
 export default function Footer() {
   const { isDark } = useStyle();

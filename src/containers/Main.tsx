@@ -13,7 +13,7 @@ import ScrollToTopButton from "./topbutton/Top.tsx";
 import Profile from "./profile/Profile.tsx";
 import SplashScreen from "./splashScreen/SplashScreen.tsx";
 import { splashScreen } from "../portfolio.tsx";
-import { StyleProvider } from "../contexts/StyleContext.tsx";
+import { StyleProvider } from "../contexts/StyleProvider.tsx";
 import { useLocalStorage } from "../hooks/useLocalStorage.tsx";
 import "./Main.scss"; //it must load last to make itt work!!!
 

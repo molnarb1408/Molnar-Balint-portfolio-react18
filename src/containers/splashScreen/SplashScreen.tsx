@@ -1,7 +1,7 @@
 import "./SplashScreen.css";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";
 import {greeting, splashScreen} from "../../portfolio.tsx";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 
 export default function SplashScreen() {
   const { isDark } = useStyle();

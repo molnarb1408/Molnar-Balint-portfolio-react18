@@ -1,26 +1,27 @@
 import "./ExperienceCard.scss";
-import { ExperienceCardProps } from "../../types/ExperienceCard.types"; 
-import { useStyle } from "../../contexts/StyleContext";
+import { ExperienceCardProps } from "../../types/ExperienceCard.types";
+import { useStyle } from "../../hooks/useStyle";
+
+const GetDescBullets = ({ descBullets, isDark }: { descBullets?: string[]; isDark: boolean }) => {
+  return descBullets
+    ? descBullets.map((item, i) => (
+      <li
+        key={i}
+        className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+      >
+        {item}
+      </li>
+    ))
+    : null;
+};
+
 
 export default function ExperienceCard({ cardInfo, backgroundColor }: ExperienceCardProps) {
   const { isDark } = useStyle();
   const defaultColor = [255, 255, 255];
   const color = backgroundColor || defaultColor;
-
   const rgb = (values: number[]) => `rgb(${values.join(", ")})`;
 
-  const GetDescBullets = ({ descBullets, isDark }: { descBullets?: string[]; isDark: boolean }) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-        <li
-          key={i}
-          className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-        >
-          {item}
-        </li>
-      ))
-      : null;
-  };
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>

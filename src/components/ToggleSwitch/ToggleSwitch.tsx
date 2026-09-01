@@ -1,7 +1,6 @@
 import "./ToggleSwitch.scss";
 import React, { useState } from "react";
-import { useStyle } from "../../contexts/StyleContext";
-
+import { useStyle } from "../../hooks/useStyle";
 
 const ToggleSwitch: React.FC = () => {
   const { isDark, changeTheme } = useStyle();

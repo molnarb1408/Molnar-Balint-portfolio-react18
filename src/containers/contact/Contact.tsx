@@ -1,7 +1,7 @@
 import "./Contact.scss";
 import { Fade } from "react-awesome-reveal";
 import { illustration, contactInfo } from "../../portfolio.tsx";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 import SocialMedia from "../../components/socialMedia/SocialMedia.tsx";
 import email from "../../assets/lottie/email.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";

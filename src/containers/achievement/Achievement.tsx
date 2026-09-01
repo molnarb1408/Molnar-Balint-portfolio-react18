@@ -1,7 +1,7 @@
 import "./Achievement.scss";
 import { Fade } from "react-awesome-reveal";
 import { achievementSection } from "../../portfolio.tsx";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 import AchievementCard from "../../components/achievementCard/AchievementCard.tsx";
 
 export default function Achievement() {

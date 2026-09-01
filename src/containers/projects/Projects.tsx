@@ -1,20 +1,26 @@
 import "./Project.scss";
 import { openSource, socialMediaLinks } from "../../portfolio";
-import { useStyle } from "../../contexts/StyleContext";
+import { useStyle } from "../../hooks/useStyle";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { GithubRepo } from "../../types/GithubRepo.types";
 import Loading from "../loading/Loading";
 import Button from "../../components/button/Button";
 
+const FailedLoading = () => null;
 
 export default function Projects() {
-  const GithubRepoCard = lazy(() =>
-    import("../../components/githubRepoCard/GithubRepoCard")
-  );
-  const FailedLoading = () => null;
+  const GithubRepoCard = lazy(() => import("../../components/githubRepoCard/GithubRepoCard"));
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState<GithubRepo[]>([]);
   const { isDark } = useStyle();
+
+  function setrepoFunction(array: GithubRepo[] | string) {
+    if (typeof array === "string") {
+      setrepo([]);
+    } else {
+      setrepo(array);
+    }
+  }
 
   useEffect(() => {
     const getRepoData = () => {
@@ -37,14 +43,6 @@ export default function Projects() {
     };
     getRepoData();
   }, []);
-
-  function setrepoFunction(array: GithubRepo[] | string) {
-    if (typeof array === "string") {
-      setrepo([]);
-    } else {
-      setrepo(array);
-    }
-  }
 
   if (
     !(typeof repo === "string" || repo instanceof String) &&

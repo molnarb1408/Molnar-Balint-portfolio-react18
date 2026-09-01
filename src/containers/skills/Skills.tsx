@@ -1,7 +1,7 @@
 import "./Skills.scss";
 import { Fade } from "react-awesome-reveal";
 import { illustration, skillsSection } from "../../portfolio.tsx";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill.tsx";
 import codingPerson from "../../assets/lottie/codingPerson.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";

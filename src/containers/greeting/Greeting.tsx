@@ -5,7 +5,7 @@ import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";
 import SocialMedia from "../../components/socialMedia/SocialMedia.tsx";
 import Button from "../../components/button/Button.tsx";
 import { illustration, greeting } from "../../portfolio.tsx";
-import { useStyle } from "../../contexts/StyleContext.tsx";
+import { useStyle } from "../../hooks/useStyle";
 import CV_hu from './CV_Molnar_Balint_HU.pdf';
 import CV_en from './CV_Molnar_Balint_EN.pdf';
 

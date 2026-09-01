@@ -1,7 +1,7 @@
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.tsx";
 import { useHeadroom } from "../../hooks/useHeadroom";
-import { useStyle } from "../../contexts/StyleContext";
+import { useStyle } from "../../hooks/useStyle";
 import { greeting, workExperiences, skillsSection, openSource, achievementSection, resumeSection } from "../../portfolio.tsx";
 
 function Header() {

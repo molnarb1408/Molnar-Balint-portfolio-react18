@@ -1,23 +1,23 @@
 import "./EducationCard.scss";
 import { Fade, Slide } from "react-awesome-reveal";
-import { useStyle } from "../../contexts/StyleContext";
+import { useStyle } from "../../hooks/useStyle";
 import { useRef } from "react";
 import { EducationCardProps } from "../../types/EducationCard.types";
+
+const GetDescBullets = ({ descBullets }: { descBullets?: string[] }) => (
+  <>
+    {descBullets &&
+      descBullets.map((item, i) => (
+        <li key={i} className="subTitle">
+          {item}
+        </li>
+      ))}
+  </>
+);
 
 export default function EducationCard({ school }: EducationCardProps) {
   const imgRef = useRef<HTMLImageElement>(null);
   const { isDark } = useStyle();
-
-  const GetDescBullets = ({ descBullets }: { descBullets?: string[] }) => (
-    <>
-      {descBullets &&
-        descBullets.map((item, i) => (
-          <li key={i} className="subTitle">
-            {item}
-          </li>
-        ))}
-    </>
-  );
 
   if (!school.logo) {
     console.error(`Image of ${school.schoolName} is missing in education section`);
