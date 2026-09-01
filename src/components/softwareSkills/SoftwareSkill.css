@@ -27,3 +27,15 @@
 .software-skill-inline > i:hover ~ p {
   color: var(--skills-color);
 }
+
+@media (max-width: 1568px) {
+  .software-skill-inline {
+    zoom: 80%;
+  }
+}
+
+@media (max-width: 1368px) {
+  .software-skill-inline {
+    zoom: 70%;
+  }
+}

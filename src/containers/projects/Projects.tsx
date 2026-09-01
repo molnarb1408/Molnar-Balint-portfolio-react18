@@ -6,8 +6,6 @@ import { GithubRepo } from "../../types/GithubRepo.types";
 import Loading from "../loading/Loading";
 import Button from "../../components/button/Button";
 
-const FailedLoading = () => null;
-
 export default function Projects() {
   const GithubRepoCard = lazy(() => import("../../components/githubRepoCard/GithubRepoCard"));
   const renderLoader = () => <Loading />;
@@ -74,6 +72,6 @@ export default function Projects() {
       </Suspense>
     );
   } else {
-    return <FailedLoading />;
+    return null;
   }
 }

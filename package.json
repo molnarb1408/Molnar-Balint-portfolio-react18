@@ -1,7 +1,7 @@
 {
   "homepage": "https://molnarbalint-portfolio.netlify.app",
-  "name": "react18-portfolio",
-  "version": "0.4.1",
+  "name": "react-portfolio",
+  "version": "0.4.2",
   "private": true,
   "type": "module",
   "dependencies": {

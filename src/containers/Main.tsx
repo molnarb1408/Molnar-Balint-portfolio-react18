@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Header from "../components/header/Header.tsx";
 import Greeting from "./greeting/Greeting.tsx";
 import Skills from "./skills/Skills.tsx";
@@ -18,7 +18,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage.tsx";
 import "./Main.css"; //it must load last to make itt work!!!
 
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
+  const darkPref = useMemo(() => window.matchMedia("(prefers-color-scheme: dark)"), []);
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
