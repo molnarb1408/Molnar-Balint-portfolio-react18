@@ -20,7 +20,7 @@ npm install
 npm run dev       # start dev server
 npm run build     # production build → ./build
 npm run preview   # preview the production build locally
-npm run lint       # run ESLint
+npm run lint      # run ESLint
 ```
 
 ## Project Structure
