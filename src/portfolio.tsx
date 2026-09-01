@@ -1,4 +1,3 @@
-import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation.json";
 
 // Splash Screen
@@ -48,11 +47,10 @@ const skillsSection = {
   title: "Képességeim:",
   subTitle: "Fejlesztőként a tanulási képességet kiemelten fontosnak tartom. Ezt igazolandó, egy számomra új technológiát, a React + Vite -t felhasználva készítettem el ezt a portfólióoldalt, hogy bemutassam: nyitott vagyok az új megoldások elsajátítására és a folyamatos önfejlesztésre.",
   skills: [
-    emoji("⚡ Modern frontend felületek tervezése, korszerű eszközökre optimalizálva"),
-    emoji("⚡ SEO optimalizáció implementálása, weboldalak-applikációk számára"),
-    emoji("⚡ Java applikációk tervezése, fejlesztése"),
-    emoji("⚡ Adatbázis kezelés, SQL - NoSQL technologiák segítségével"),
-
+    "⚡ Modern frontend felületek tervezése, korszerű eszközökre optimalizálva",
+    "⚡ SEO optimalizáció implementálása, weboldalak-applikációk számára",
+    "⚡ Java applikációk tervezése, fejlesztése",
+    "⚡ Adatbázis kezelés, SQL - NoSQL technologiák segítségével",
   ],
 
   softwareSkills: [
@@ -261,7 +259,7 @@ const bigProjects = {
 // Achievement Section
 
 const achievementSection = {
-  title: emoji("Eredmények és Bizonyítványok 🏆 "),
+  title: "Eredmények és Bizonyítványok 🏆 ",
   subtitle:
     "Achievementek, Bizonyítványok, Díjak amiket elértem, és büszke vagyok rájuk!",
 
@@ -325,7 +323,7 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Elérhetőségem ☎️"),
+  title: "Elérhetőségem ☎️",
   subtitle:
     "Bármilyen project, munka lehetőség vagy egyéb kérdés esetén keres bátran!",
   number: "",

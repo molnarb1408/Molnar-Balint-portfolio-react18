@@ -1,5 +1,4 @@
 import "./GithubProfileCard.scss";
-import emoji from "react-easy-emoji";
 import SocialMedia from "../socialMedia/SocialMedia.tsx";
 import { contactInfo, isHireable } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
@@ -17,7 +16,7 @@ export default function GithubProfileCard({ prof }: GithubProfileCardProps) {
             <div className="blog-header">
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
-            <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
+            <h2 className="bio-text">"{String(prof.bio)}"</h2>
             {prof.location !== null && (
               <div className="location-div">
                 <span className="desc-prof">

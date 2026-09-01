@@ -1,6 +1,5 @@
 import "./ToggleSwitch.scss";
 import React, { useState } from "react";
-import emoji from "react-easy-emoji";
 import { useStyle } from "../../contexts/StyleContext";
 
 
@@ -21,7 +20,7 @@ const ToggleSwitch: React.FC = () => {
         onChange={handleToggle}
       />
       <span className="slider round">
-        <span className="emoji">{isChecked ? emoji("🌜") : emoji("☀️")}</span>
+        <span className="emoji">{isChecked ? "🌜" : "☀️"}</span>
       </span>
     </label>
   );

@@ -1,6 +1,5 @@
 import "./Greeting.scss";
 import { Fade } from "react-awesome-reveal";
-import emoji from "react-easy-emoji";
 import landingPerson from "../../assets/lottie/landingPerson.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie.tsx";
 import SocialMedia from "../../components/socialMedia/SocialMedia.tsx";
@@ -27,7 +26,7 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+                <span className="wave-emoji">{"👋"}</span>
               </h1>
               <p
                 className={

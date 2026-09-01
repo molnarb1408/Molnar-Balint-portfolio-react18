@@ -1,13 +1,11 @@
 import "./Header.scss";
-import Headroom from "react-headroom";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.tsx";
+import { useHeadroom } from "../../hooks/useHeadroom";
 import { useStyle } from "../../contexts/StyleContext";
 import { greeting, workExperiences, skillsSection, openSource, achievementSection, resumeSection } from "../../portfolio.tsx";
 
-// CJS/ESM interop workaround Vite 8 alatt:
-const HeadroomComponent = (Headroom as unknown as { default?: typeof Headroom }).default ?? Headroom;
-
 function Header() {
+  const visible = useHeadroom(50); // 50px után kezd reagálni
   const { isDark } = useStyle();
   const viewExperience: boolean = workExperiences.display;
   const viewOpenSource: boolean = openSource.display;
@@ -16,7 +14,15 @@ function Header() {
   const viewResume: boolean = resumeSection.display;
 
   return (
-    <HeadroomComponent>
+    <div
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        transform: visible ? "translateY(0)" : "translateY(-100%)",
+        transition: "transform 0.3s ease-in-out",
+      }}
+    >
       <header className={isDark ? "dark-menu header" : "header"}>
         <a href="/" className="logo">
           <span className="grey-color"> &lt;</span>
@@ -67,7 +73,7 @@ function Header() {
           </li>
         </ul>
       </header>
-    </HeadroomComponent>
+    </div>
   );
 }
 export default Header;
