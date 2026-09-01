@@ -21,12 +21,11 @@ npm run dev       # start dev server
 npm run build     # production build → ./build
 npm run preview   # preview the production build locally
 npm run lint       # run ESLint
-npm run format      # format with Prettier
 ```
 
 ## Project Structure
 
-``
+```
 react-portfolio/
 ├── public/
 │   ├── favicon.ico, favicon-16x16.png, favicon-32x32.png
@@ -120,6 +119,17 @@ Deployed automatically via Netlify on push to `main`. Node version is pinned via
 # Changelog
 
 All notable changes to this project are documented in this file.
+
+## [0.4.2] - 2026-09-01
+ 
+### Fixed
+- `Main.tsx`: `window.matchMedia("(prefers-color-scheme: dark)")` was re-evaluated on every render — wrapped in `useMemo` so it only runs once
+- `index.html`: removed hand-copied, hash-pinned font `preload` links (`Montserrat-Regular.dKSYcarW.ttf`, `Agustina.QfTSMhmS.woff`) that would silently 404 and stop preloading once a build regenerated different content hashes; replaced with a `?url`-based dynamic preload in `src/index.tsx` that always resolves to the actual current build asset
+- `index.html` / `index.tsx`: corrected the `type` attribute for the Montserrat font preload from `font/woff` to `font/ttf`, matching its actual file extension
+### Removed
+- `Projects.tsx`: removed the unnecessary `FailedLoading = () => null` wrapper component — the failure branch now returns `null` directly
+### Notes
+- No visual or functional changes — this release is a bugfix + dead-code cleanup pass only
 
 ## [0.4.1] - 2026-09-01
 
