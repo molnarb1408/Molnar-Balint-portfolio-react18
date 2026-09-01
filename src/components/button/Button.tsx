@@ -1,5 +1,5 @@
 import "./Button.css";
-import { ButtonProps } from "./Button.types";
+import { ButtonProps } from "../../types/Button.types";
 
 export default function Button({
   text,
