@@ -186,7 +186,7 @@ const workExperiences = {
       role: "Szoftverfejlesztő",
       company: "Aphyra Games",
       companylogo: new URL("./assets/images/aphyraGameslogo.webp", import.meta.url).href,
-      date: "2024 Február – 2026 Augusztus",
+      date: "2025 Január – 2026 Augusztus",
       desc: "Teljes értékű indie videójáték fejlesztése, önálló fejlesztői szerepben, a teljes fejlesztési életciklus lefedésével.",
       descBullets: [
         "Fejlesztés, tesztelés, hibajavítás, buildelés, lokalizáció pipeline kezelése",
