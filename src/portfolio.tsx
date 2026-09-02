@@ -18,7 +18,7 @@ const greeting = {
   username: "Molnár Bálint",
   title: "Üdv, Bálint vagyok!",
   subTitle: (
-    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular, React és Vite, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing, JavaFX, Maven, Python és SQL az technológiák. Emellett több éves gyakorlati tapasztalattal rendelkezem indie videójáték-fejlesztés terén is (Python/Ren'Py, Godot), a teljes fejlesztési életciklust átfogva a tervezéstől a Steam/itch.io release-ig."
+    "A nevem Molnár Bálint, köszöntelek a portfólióoldalamon! Precíz és elkötelezett fejlesztőként dolgozom, aki szívesen vállal felelősséget egy projekt teljes életciklusáért, a tervezéstől a végleges megjelenésig. Frontend oldalon magabiztosan mozgok HTML, CSS, Bootstrap, JavaScript, Angular, React és Vite technológiákban, backend és adatkezelés terén pedig Java, Swing, JavaFX, Maven, Python, valamint SQL és NoSQL adatbázisok jelentik az eszköztáramat. Emellett több éves gyakorlati tapasztalattal rendelkezem indie videójáték-fejlesztés terén is (Python/Ren'Py, Godot), ahol a teljes fejlesztési folyamatot végigvittem a koncepciótól egészen a Steamen és itch.io-n történő megjelenésig."
   ),
   resumeLink: true,
   displayGreeting: true
@@ -44,8 +44,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Képességeim:",
-  subTitle: "Fejlesztőként a tanulási képességet kiemelten fontosnak tartom. Ezt igazolandó, egy számomra új technológiát, a React + Vite -t felhasználva készítettem el ezt a portfólióoldalt, hogy bemutassam: nyitott vagyok az új megoldások elsajátítására és a folyamatos önfejlesztésre.",
-  skills: [
+  subTitle: "Fejlesztőként kiemelten fontosnak tartom a folyamatos tanulást és az alkalmazkodóképességet. Ennek bizonyítására egy számomra új technológiát, a React + Vite-ot választottam ehhez a portfólióoldalhoz, megmutatva, hogy nyitott vagyok az új eszközök gyors elsajátítására és a folyamatos önfejlesztésre.", skills: [
     "⚡ Modern UI/UX felületek tervezése, optimalizálása",
     "⚡ SEO optimalizáció implementálása, weboldalak számára",
     "⚡ Java applikációk tervezése, fejlesztése",
@@ -147,7 +146,7 @@ const educationInfo = {
       duration: "2019 Szeptember - 2022 Június",
       desc: "MNB Kiválósági ösztöndíj nyertese",
       descBullets: [
-        "Kiemelkedő Jeles érdemjeggyel elvégzet alapképzés",
+        "Kiemelkedő, jeles eredménnyel elvégzett alapképzés",
       ]
     },
     {
@@ -155,7 +154,7 @@ const educationInfo = {
       logo: new URL("./assets/images/pteJuridecoLogo.webp", import.meta.url).href,
       subHeader: "Vállalkozási mérlegképes könyvelő",
       duration: "2019 Szeptember - 2022 Június",
-      desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzetség",
+      desc: "Egyetem elvégzése közben, sikeresen megszerzett Vállalkozási mérlegképes könyvelő végzettség",
       descBullets: ["Hivatalos, Vállalkozási mérlegképes könyvelő bizonyítvány"]
     },
     {
@@ -171,8 +170,8 @@ const educationInfo = {
       logo: new URL("./assets/images/eclLogo.webp", import.meta.url).href,
       subHeader: "OKJ: Logisztikai Ügyintéző + Érettségi",
       duration: "2014 Szeptember - 2019 Május",
-      desc: "Logisztikai ügyintéző OKJ és Kereskedelmi ismeretek végzetség megszerzése",
-      descBullets: ["Jeles eredménnyel elvégzett Éretségi és 5* kiemelkedő, OKJ végzetség"]
+      desc: "Logisztikai ügyintéző OKJ-s és kereskedelmi ismeretek szakképesítés megszerzése",
+      descBullets: ["Jeles eredménnyel letett érettségi és kiemelkedő (5*) eredménnyel megszerzett OKJ-s szakképesítés"]
     },
   ]
 };
@@ -317,7 +316,7 @@ const bigProjects = {
     {
       image: new URL("./assets/images/fmdLogo.webp", import.meta.url).href,
       projectName: "For My Darling",
-      projectDesc: "Vizuális novella az Aphyra Games kiadásában, Python / Ren'Py motorral fejlesztve, Steamen és itch.io-n elérhető. Teljes körű fejlesztői szerepet töltöttem be s azontúl megvalósítottam: Story, Gameplay, UI/UX, Graphic/Visual design, Composer, Marketing, Social Media, CI/CD stb. Release-folyamatot végigvezetem, a több ezer elemből álló képi asset pipeline optimalizálását, illetve a márka- és megjelenés-menedzsmentet (press kit, arculati útmutató). A játék megjelent többek közt a 80.lv magaziban is.",
+      projectDesc: "Vizuális novella az Aphyra Games kiadásában, Python / Ren'Py motorral fejlesztve, Steamen és itch.io-n elérhető. Teljes körű fejlesztői szerepet töltöttem be, és emellett megvalósítottam: Story, Gameplay, UI/UX, Graphic/Visual design, Composer, Marketing, Social Media, CI/CD stb. Végigvezettem a release-folyamatot, optimalizáltam a több ezer elemből álló képi asset pipeline-t, illetve elláttam a márka- és megjelenés-menedzsmentet (press kit, arculati útmutató). A játék megjelent többek közt a 80.lv magazinban is.",
       footerLink: [
         {
           name: "Website",

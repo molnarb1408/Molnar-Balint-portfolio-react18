@@ -8,7 +8,7 @@ A personal one-page portfolio site built to showcase skills, work experience, an
 
 - **React 19** + **TypeScript**
 - **Vite 8** — dev server & build tool
-- **SCSS** — styling (planned migration to native CSS)
+- **Native CSS** — component, container, and shared styles consolidated under `src/styles/` (fully migrated from SCSS)
 - **react-awesome-reveal** — scroll animations
 - **lottie-react** — Lottie animations
 - **GitHub GraphQL API** — pulls pinned repos & profile data at build/runtime (`fetch.js`)
@@ -35,43 +35,42 @@ react-portfolio/
 ├── src/
 │   ├── App.tsx / App.css
 │   ├── index.tsx / index.css
-│   ├── portfolio.tsx           
+│   ├── portfolio.tsx
 │   ├── utils.tsx
 │   ├── vite-env.d.ts
-
 │   ├── assets/
-│   │   ├── fonts/               
-│   │   ├── images/               
-│   │   └── lottie/               
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   └── lottie/
 │   ├── components/
-│   │   ├── achievementCard/      # AchievementCard.tsx
-│   │   ├── button/               # Button.tsx
-│   │   ├── displayLottie/        # DisplayLottie.tsx
-│   │   ├── educationCard/        # EducationCard.tsx
-│   │   ├── experienceCard/       # ExperienceCard.tsx
-│   │   ├── footer/               # Footer.tsx
-│   │   ├── githubProfileCard/    # GithubProfileCard.tsx
-│   │   ├── githubRepoCard/       # GithubRepoCard.tsx
-│   │   ├── header/               # Header.tsx
-│   │   ├── socialMedia/          # SocialMedia.tsx
-│   │   ├── softwareSkills/       # SoftwareSkill.tsx
-│   │   ├── talkCard/             # TalkCard.tsx
-│   │   └── ToggleSwitch/         # ToggleSwitch.tsx
+│   │   ├── AchievementCard.tsx
+│   │   ├── Button.tsx
+│   │   ├── DisplayLottie.tsx
+│   │   ├── EducationCard.tsx
+│   │   ├── ExperienceCard.tsx
+│   │   ├── Footer.tsx
+│   │   ├── GithubProfileCard.tsx
+│   │   ├── GithubRepoCard.tsx
+│   │   ├── Header.tsx
+│   │   ├── SocialMedia.tsx
+│   │   ├── SoftwareSkill.tsx
+│   │   ├── TalkCard.tsx
+│   │   └── ToggleSwitch.tsx
 │   ├── containers/
-│   │   ├── Main.tsx / Main.css   # Fő layout, dark mode állapot
-│   │   ├── achievement/          # Achievement.tsx
-│   │   ├── contact/              # Contact.tsx
-│   │   ├── education/            # Education.tsx
-│   │   ├── greeting/             # Greeting.tsx
-│   │   ├── loading/              # Loading.tsx 
-│   │   ├── profile/              # Profile.tsx
-│   │   ├── projects/             # Projects.tsx 
-│   │   ├── skillProgress/        # skillProgress.tsx
-│   │   ├── skills/               # Skills.tsx 
-│   │   ├── splashScreen/         # SplashScreen.tsx
-│   │   ├── StartupProjects/      # StartupProject.tsx
-│   │   ├── topbutton/            # Top.tsx
-│   │   └── workExperience/       # WorkExperience.tsx
+│   │   ├── Achievement.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Education.tsx
+│   │   ├── Greeting.tsx
+│   │   ├── Loading.tsx
+│   │   ├── Main.tsx
+│   │   ├── Profile.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Skills.tsx
+│   │   ├── skillProgress.tsx
+│   │   ├── SplashScreen.tsx
+│   │   ├── StartupProject.tsx
+│   │   ├── Top.tsx
+│   │   └── WorkExperience.tsx
 │   ├── contexts/
 │   │   ├── StyleContext.tsx
 │   │   └── StyleProvider.tsx
@@ -80,10 +79,10 @@ react-portfolio/
 │   │   ├── useLocalStorage.tsx
 │   │   └── useStyle.tsx
 │   ├── styles/
-│   │   ├── components.css        # Componnents classes
-│   │   ├── containers.css        # Containers classes
-│   │   ├── variables.css         # Global CSS custom property
-│   │   └── shared.css            # Shared classes
+│   │   ├── components.css       # All component styles, consolidated
+│   │   ├── containers.css       # All container styles, consolidated
+│   │   ├── variables.css        # Global CSS custom properties
+│   │   └── shared.css           # Shared utility classes
 │   └── types/
 │       ├── AchievementCard.types.ts
 │       ├── Button.types.ts
@@ -120,6 +119,13 @@ Deployed automatically via Netlify on push to `main`. Node version is pinned via
 # Changelog
 
 All notable changes to this project are documented in this file.
+
+## [0.4.4] - 2026-09-02
+
+### Fixed
+- `portfolio.tsx`: fixed typos and wording issues across greeting, skills, education, and project descriptions; improved phrasing 
+- `README.md`: removed outdated SCSS reference in Tech Stack (project fully migrated to native CSS as of 0.4.0)
+- `README.md`: corrected Project Structure to reflect the actual flat `components/`/`containers/` layout and consolidated `styles/` files (previously implied non-existent per-component subfolders and CSS files)
 
 ## [0.4.3] - 2026-09-02
 
@@ -218,7 +224,7 @@ All notable changes to this project are documented in this file.
 - Removed duplicate Sass installation — kept `sass-embedded` only (matches the modern compiler API used by Vite)
 
 ### Infrastructure
-- Added `netlify.toml` pinning `NODE_VERSION = "22"` to match Vite 8's Node requirement
+- Added `netlify.toml` pinning `NODE_VERSION = "24"` to match Vite 8's Node requirement
 
 ---
 
