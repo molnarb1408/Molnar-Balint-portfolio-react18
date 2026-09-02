@@ -38,7 +38,6 @@ react-portfolio/
 │   ├── portfolio.tsx           # Tartalmi konfiguráció (szövegek, linkek)
 │   ├── utils.tsx
 │   ├── vite-env.d.ts
-│   ├── logo.svg
 │   ├── assets/
 │   │   ├── fonts/               # Agustina.woff, Montserrat-Regular.ttf
 │   │   ├── images/               # webp logók, placeholder.webp, talksCardBack.svg
