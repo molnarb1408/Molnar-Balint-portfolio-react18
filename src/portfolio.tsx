@@ -46,11 +46,11 @@ const skillsSection = {
   title: "Képességeim:",
   subTitle: "Fejlesztőként a tanulási képességet kiemelten fontosnak tartom. Ezt igazolandó, egy számomra új technológiát, a React + Vite -t felhasználva készítettem el ezt a portfólióoldalt, hogy bemutassam: nyitott vagyok az új megoldások elsajátítására és a folyamatos önfejlesztésre.",
   skills: [
-    "⚡ Modern frontend felületek tervezése, korszerű eszközökre optimalizálva",
-    "⚡ SEO optimalizáció implementálása, weboldalak-applikációk számára",
+    "⚡ Modern UI/UX felületek tervezése, optimalizálása",
+    "⚡ SEO optimalizáció implementálása, weboldalak számára",
     "⚡ Java applikációk tervezése, fejlesztése",
     "⚡ Adatbázis kezelés, SQL - NoSQL technologiák segítségével",
-    "⚡ Komplex, reszponzív UI/UX rendszerek tervezése videójátékokhoz, több platform és kontrollmód figyelembevételével",
+    "⚡ Komplex, reszponzív UI/UX rendszerek tervezése videójátékokhoz",
   ],
 
   softwareSkills: [
@@ -202,16 +202,23 @@ const workExperiences = {
     },
     {
       backgroundColor: [226, 92, 76],
-      role: "Vállalati weblap készítés",
+      role: "Vállalati (full-stack) weblap készítés",
       company: "Greensense Consulting",
       companylogo: new URL("./assets/images/greenssenseCroppedLogo.webp", import.meta.url).href,
-      date: "2024 Augusztus – 2024 Október",
+      date: "2024 Július – 2025 Április",
       desc: "A GreenSense Consulting megbízásából elkészítettem a hívatalos 'GreenSense.hu' weblapot.",
       descBullets: [
-        "Technológiák: HTML5, CSS3, Bootstrap, JavaScript, PHP, npm",
+        "Technológiák (Stack): HTML5, CSS3, Bootstrap, JavaScript, PHP, Hosting: RackForest",
         "Informatív, modern sztenderdeknek megfelelő design",
+        "Egyértelmű vizuális hierarchia",
+        "Reszponzív, mobilbarát design",
+        "Optimalizált képek (WebP)",
+        "Következetes színpaletta, tipográfia és spacing",
+        "Gyors initial page load",
+        "Contact / lead formok",
         "SEO optimalizáció",
-        "Felület készítés, tesztelés, stb.",
+        "A/B tesztelés",
+        "Egyedi szerverkonfigurációt végeztem a stabil és gyors működés érdekében"
       ]
     },
     {
@@ -310,11 +317,19 @@ const bigProjects = {
     {
       image: new URL("./assets/images/fmdLogo.webp", import.meta.url).href,
       projectName: "For My Darling",
-      projectDesc: "Vizuális novella az Aphyra Games kiadásában, Python / Ren'Py motorral fejlesztve, Steamen és itch.io-n elérhető. Teljes körű fejlesztői szerepet töltöttem be: a fő játékmenet mellett egy önálló dungeon crawler minijátékot is kidolgoztam (irány- és mozgásrendszer, HUD, debug minimap, eseménynapló rendszer). Emellett kezeltem a Butler CLI-n keresztüli itch.io build- és release-folyamatot, a több ezer elemből álló képi asset pipeline optimalizálását, illetve a márka- és megjelenés-menedzsmentet (press kit, arculati útmutató).",
+      projectDesc: "Vizuális novella az Aphyra Games kiadásában, Python / Ren'Py motorral fejlesztve, Steamen és itch.io-n elérhető. Teljes körű fejlesztői szerepet töltöttem be s azontúl megvalósítottam: Story, Gameplay, UI/UX, Graphic/Visual design, Composer, Marketing, Social Media, CI/CD stb. Release-folyamatot végigvezetem, a több ezer elemből álló képi asset pipeline optimalizálását, illetve a márka- és megjelenés-menedzsmentet (press kit, arculati útmutató). A játék megjelent többek közt a 80.lv magaziban is.",
       footerLink: [
         {
-          name: "Aphyra Games",
-          url: ""
+          name: "Website",
+          url: "https://aphyra-games.com"
+        },
+        {
+          name: "Steam",
+          url: "https://store.steampowered.com/app/4599310/For_My_Darling/"
+        },
+        {
+          name: "Itch.io",
+          url: "https://aphyra-games.itch.io/for-my-darling"
         }
       ]
     },
@@ -381,7 +396,7 @@ const achievementSection = {
     {
       title: "Ruander - Backend fejlesztő",
       subtitle:
-        "Sikeresen elvégzett Java Backend fejlesztői képzés!",
+        "Sikeresen elvégzett Java Backend fejlesztői képzés, kiemelkedő 5* eredménnyel!!",
       image: new URL("./assets/images/ruanderLogo.webp", import.meta.url).href,
       imageAlt: "Ruander Logo",
       footerLink: [
