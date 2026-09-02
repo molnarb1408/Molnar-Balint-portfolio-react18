@@ -1,7 +1,7 @@
 /*
   Global design tokens.
   This file replaces `_globalColor.scss`. It's imported exactly once,
-  in `src/index.css`, and every other stylesheet reads these tokens
+  in `App.css`, and every other stylesheet reads these tokens
   via `var(--token-name)` — no per-file import needed, since CSS custom
   properties defined on :root cascade to the whole document automatically.
 */
@@ -52,15 +52,17 @@
   --dark-box-shadow: #d9dbdf;
   --dark-box-shadow-2: #ffffff;
 
+  /* reusable card shadows (shared pattern across Experience/Achievement/GithubRepo/StartupProject cards) */
+  --card-shadow: 0px 10px 30px -15px var(--light-box-shadow-dark);
+  --card-shadow-hover: 0px 20px 30px -10px var(--light-box-shadow-dark);
+  --card-shadow-dark: 0px 10px 30px -15px var(--dark-box-shadow);
+  --card-shadow-hover-dark: 0px 20px 30px -10px var(--dark-box-shadow);
+
   /* linear gradients */
-  --experience-card-blurred-div-lg: linear-gradient(
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.2)
-  );
-  --experience-card-banner-lg: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5)
-  );
+  --experience-card-blurred-div-lg: linear-gradient(rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2));
+  --experience-card-banner-lg: linear-gradient(rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5));
 
   /* borders */
   --progress-bar-background: rgb(243, 239, 239);

@@ -1,24 +1,5 @@
-.App {
-  text-align: center;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: var(--app-header-bg);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(0.625rem + 2vmin);
-  color: var(--text-color-dark);
-}
-
-.App-link {
-  color: var(--app-link);
-}
+/* Design-system entry point: imports tokens, shared utilities, and every component/container stylesheet */
+@import "./styles/variables.css";
+@import "./styles/shared.css";
+@import "./styles/components.css";
+@import "./styles/containers.css";

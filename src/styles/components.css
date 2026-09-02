@@ -1,0 +1,1174 @@
+/* Header component */
+.headroom-wrapper {
+    max-height: 100px;
+}
+
+.dark-menu {
+    background-color: var(--dark-background) !important;
+    color: var(--text-color-dark);
+}
+
+.dark-menu li a {
+    color: var(--text-color-dark) !important;
+}
+
+.dark-menu li a:hover {
+    background-color: var(--button-color) !important;
+}
+
+.header {
+    background-color: var(--light-background-1);
+    max-width: 100%;
+    padding: 15px 20px;
+    margin: 0px auto;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.grey-color {
+    color: var(--sub-title);
+}
+
+.header li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: var(--header-hover-bg);
+}
+
+.header .logo {
+    display: block;
+    flex: none;
+    float: left;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: normal;
+}
+
+.header .logo-name {
+    font-family: "Agustina Regular";
+    font-weight: bold;
+    font-variant-ligatures: no-common-ligatures;
+    -webkit-font-variant-ligatures: no-common-ligatures;
+    padding: 0 10px;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: var(--icon-background);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon-dark {
+    background: var(--text-color-dark);
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: var(--icon-background);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon-dark:before,
+.header .menu-icon .navicon-dark:after {
+    background: var(--text-color-dark) !important;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 486px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent !important;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* Button component */
+.main-button {
+    background-color: var(--button-color);
+    border: solid 1px var(--button-color);
+    color: var(--text-color-dark);
+    font-weight: 700;
+    width: 140px;
+    padding: 13px 35px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.main-button:hover {
+    background-color: var(--dark-box-shadow-2);
+    color: var(--button-color);
+    transition: all 0.3s ease 0s;
+    transform: translateY(-3px);
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-button>.main-button {
+    margin-right: 0 !important;
+}
+
+/* Toggle switch component */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+input {
+    transform: scale(0.5);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-switch-slider-bg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 28px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--text-color-dark);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: var(--toggle-check);
+}
+
+input:focus+.slider {
+    box-shadow: var(--toggle-check);
+}
+
+input:checked+.slider::before,
+input:checked+.slider>.emoji {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.slider::after {
+    display: inline;
+    position: absolute;
+    right: 9.3%;
+    bottom: 17.5%;
+}
+
+input:checked+.slider::after {
+    display: inline;
+    position: absolute;
+    right: 56.3%;
+    bottom: 14.5%;
+}
+
+.emoji {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+
+/* Social media icons component */
+.social-media-div {
+    font-size: 2em;
+}
+
+.icon-button {
+    margin-bottom: 10px;
+}
+
+.icon-button i {
+    color: var(--text-color-dark);
+    border-radius: 2.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2.6rem;
+    margin-bottom: 10px;
+    transition: 0.2s ease-in;
+}
+
+.facebook i {
+    background-color: var(--facebook);
+}
+
+.linkedin i {
+    background-color: var(--linkedin);
+}
+
+.github i {
+    background-color: var(--github);
+}
+
+.gitlab i {
+    background-color: var(--gitlab);
+}
+
+.google i {
+    background-color: var(--google);
+}
+
+.twitter i {
+    background-color: var(--twitter);
+}
+
+.medium i {
+    background-color: var(--medium);
+}
+
+.stack-overflow i {
+    background-color: var(--stackoverflow);
+}
+
+.kaggle i {
+    background-color: var(--kaggle);
+}
+
+.instagram i {
+    background-color: var(--instagram);
+}
+
+.twitter i:hover,
+.google i:hover,
+.gitlab i:hover,
+.github i:hover,
+.linkedin i:hover,
+.facebook i:hover,
+.instagram i:hover,
+.stack-overflow i:hover,
+.kaggle i:hover,
+.medium i:hover {
+    background-color: var(--text-color);
+}
+
+/* Software skill icons component */
+.dev-icons {
+    padding-left: 0;
+    list-style: none;
+    font-size: 3rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.software-skill-inline {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.software-skill-inline>i {
+    color: var(--sub-title);
+}
+
+.software-skill-inline>i:hover {
+    color: var(--skills-color);
+}
+
+.software-skill-inline>p {
+    color: var(--sub-title);
+    font-size: 13.5px;
+}
+
+.software-skill-inline>i:hover~p {
+    color: var(--skills-color);
+}
+
+/* Experience card component */
+.experience-card {
+    position: relative;
+    background-color: var(--light-background-2);
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    border: 1px solid var(--light-border-1);
+}
+
+.experience-card-dark {
+    position: relative;
+    background-color: var(--dark-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    border: 1px solid var(--light-border-1);
+}
+
+.experience-card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.experience-banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background: var(--experience-card-banner-lg);
+    border-radius: 10px 10px 0px 0px;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+    height: 11rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.experience-blurred_div {
+    position: absolute;
+    background: var(--experience-card-blurred-div-lg);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    height: 11rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.experience-div-company {
+    position: absolute;
+    background: transparent;
+    height: 9rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-text-company {
+    text-align: center;
+    text-shadow: 2px 2px 5px var(--blog-card-title-color);
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--light-background-2);
+    font-size: 25px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.experience-roundedimg {
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 0.5rem 1rem var(--light-box-shadow-darker);
+    border-radius: 50%;
+}
+
+.experience-text-role {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0px;
+    padding-top: 1.5rem;
+    line-height: normal;
+}
+
+.dark-mode-text {
+    color: var(--text-color-dark) !important;
+}
+
+.experience-text-date {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0px;
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+.experience-text-desc {
+    text-align: center;
+}
+
+.experience-text-details {
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Education card component */
+.education-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.education-card:hover+.education-card-border {
+    border-color: var(--education-card-border);
+    width: 100%;
+    -webkit-transition: width 0.6s ease-in-out;
+    -moz-transition: width 0.6s ease-in-out;
+    -o-transition: width 0.6s ease-in-out;
+    transition: width 0.6s ease-in-out;
+}
+
+.education-card-border {
+    height: 30px;
+    width: 80%;
+    border-top: 2px solid var(--light-border-1);
+    margin-bottom: 20px;
+    -webkit-transition: width 0.6s ease-in-out;
+    -moz-transition: width 0.6s ease-in-out;
+    -o-transition: width 0.6s ease-in-out;
+    transition: width 0.6s ease-in-out;
+}
+
+.education-text-school {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 27px;
+}
+
+.education-roundedimg {
+    object-fit: cover;
+    margin-right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 0 0.5rem 1rem var(--light-box-shadow-darker);
+    border-radius: 50%;
+}
+
+.education-card-right {
+    max-width: 70%;
+}
+
+.education-text-subHeader {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 19px;
+    margin: 0px;
+    padding-top: 0.8rem;
+    line-height: normal;
+}
+
+.education-text-duration {
+    color: var(--title-color);
+    font-size: 19px;
+    margin: 0px;
+    padding-top: 0.5rem;
+}
+
+.education-text-desc {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-text-bullets>ul {
+    margin-top: 0.5rem;
+}
+
+/* Achievement card component */
+.certificate-card {
+    background-color: var(--light-background-2);
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--light-border-1);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.certificate-detail-div {
+    text-align: center;
+}
+
+.certificate-card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.dark-mode.certificate-card:hover {
+    box-shadow: var(--achievement-certificate-card-hover-dark) 0px 20px 30px -10px;
+}
+
+.certificate-image-div {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-cards-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem 1rem;
+}
+
+.certificate-card-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.certificate-card-footer span.certificate-tag {
+    background: var(--button-color);
+    color: var(--light-background-3);
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 4px;
+    display: inline-flex;
+    font-size: 0.75rem;
+    height: 2em;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1.5;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0 0.75em;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+span.certificate-tag:hover {
+    background: var(--button-hover);
+}
+
+/* Talk card component */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.rectangle {
+    background: url(../assets/images/talksCardBack.svg);
+    width: 380px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 0px 20px 50px var(--dark-box-shadow);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+
+.rectangle:hover {
+    box-shadow: 0 20px 40px var(--text-color-dark);
+}
+
+.dark-rectangle {
+    box-shadow: 0px 0px 20px 0px;
+}
+
+.mask {
+    clip: rect(0px, 460px, 220px, 0px);
+    border-radius: 4px;
+    position: absolute;
+}
+
+.talk-card-title {
+    color: var(--text-color-dark);
+    margin: auto;
+    text-align: left;
+    margin-top: 25px;
+    padding: 0px 0px 40px 30px;
+    font-size: 30px;
+    line-height: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.talk-card-subtitle {
+    margin-top: 35px;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    color: var(--talk-card-sub-title);
+    line-height: 18px;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.talk-button {
+    background-color: var(--button-color);
+    color: var(--text-color-dark);
+    width: 90px;
+    padding: 10px 18px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.talk-button:hover {
+    background: var(--button-hover);
+}
+
+.card-footer-button-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Github repo card component */
+.repo-card-div {
+    color: var(--github-repo-card-color);
+    background-color: var(--light-background-2);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.repo-card-div:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.repo-stats {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--github-repo-card-repo-card-stats-color);
+}
+
+.repo-left-stat {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+}
+
+.language-color {
+    width: 10px;
+    height: 10px;
+    background-color: var(--github-repo-card-language-color-bg);
+    margin-right: 0.25rem;
+    border-radius: 100%;
+}
+
+.repo-left-stat span {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 0.75rem;
+}
+
+.repo-name-div {
+    display: flex;
+    align-items: center;
+}
+
+.repo-svg {
+    margin-right: 0.5rem;
+    min-width: 16px;
+}
+
+.repo-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--github-repo-card-repo-name-color);
+    margin-bottom: 0.75rem;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    overflow: hidden;
+    margin: 0px;
+    height: 30px;
+}
+
+.repo-star-svg {
+    margin-right: 0.3rem;
+}
+
+.repo-description {
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.dark-card-mode {
+    background-color: var(--dark-background);
+    color: var(--text-color-dark);
+}
+
+.dark-card-mode p {
+    color: var(--text-color-dark);
+}
+
+.dark-card-mode .repo-svg {
+    fill: var(--text-color-dark);
+}
+
+.dark-card-mode:hover {
+    background-color: var(--button-color) !important;
+    box-shadow: 0px 0px 16px var(--dark-box-shadow);
+}
+
+/* Github profile card component */
+.profile-image {
+    border-radius: 50%;
+    border: 0.5rem solid var(--github-profile-card-border);
+    margin-left: auto;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    box-shadow: var(--light-box-shadow) 0 30px 30px -30px;
+    transition: all 0.3s ease-out;
+}
+
+.profile-image:hover {
+    box-shadow: none;
+}
+
+.prof-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.location-div {
+    text-shadow: var(--github-profile-card-location-ts);
+}
+
+.opp-div {
+    padding-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+}
+
+.main-content-profile {
+    flex: 80%;
+}
+
+.image-content-profile {
+    text-align: right;
+    flex: 20%;
+    max-width: 100%;
+    height: auto;
+}
+
+.bio-text {
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.desc-prof {
+    line-height: 45px;
+    font-size: 19px;
+}
+
+/* Footer component */
+.footer-text {
+    text-align: center;
+    color: var(--sub-title) !important;
+}
+
+.footer-div {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Responsive @media queries */
+
+@media all and (max-width: 2560px) and (min-width: 1552px) {
+    .slider::after {
+        bottom: 12.5% !important;
+    }
+}
+
+@media all and (max-width: 1552px) and (min-width: 1440px) {
+    .slider::after {
+        bottom: 7.5% !important;
+    }
+}
+
+@media (max-width: 1568px) {
+    .software-skill-inline {
+        zoom: 80%;
+    }
+}
+
+@media (max-width: 1380px) {
+    .education-card {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .education-card-right {
+        max-width: 90%;
+    }
+
+    .education-card-border {
+        width: 90%;
+    }
+
+    .education-text-subHeader {
+        padding-top: 0.5rem;
+        font-size: 16px;
+    }
+
+    .education-text-school {
+        font-size: 20px;
+        height: 23px;
+    }
+
+    .education-text-duration {
+        font-size: 16px;
+    }
+
+    .education-roundedimg {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 0.5rem;
+        margin-right: 0px;
+    }
+
+    .talk-card-title {
+        font-size: 25px;
+    }
+
+    .experience-text-role {
+        padding-top: 0.5rem;
+        font-size: 22px;
+    }
+
+    .experience-text-company {
+        font-size: 22px;
+    }
+
+    .experience-text-date {
+        font-size: 18px;
+    }
+
+    .experience-roundedimg {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .software-skill-inline {
+        zoom: 70%;
+    }
+}
+
+@media (max-width: 960px) {
+    .header {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header .menu {
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 12px;
+    }
+
+    .social-media-div {
+        text-align: center;
+    }
+
+    .main-button {
+        font-size: 0.938rem;
+        padding: 12px 18px;
+        margin-right: 0px;
+    }
+
+    input:checked+.slider::after {
+        right: 60.3%;
+        bottom: 20.5%;
+    }
+
+    .slider::after {
+        right: 15.3%;
+        bottom: 22.5%;
+    }
+
+    .mask {
+        clip-path: none;
+        position: relative;
+    }
+
+    .talk-card-title {
+        margin-top: 30px;
+    }
+
+    .talk-button {
+        background-color: var(--button-color);
+        color: var(--text-color-dark);
+        width: 90px;
+        padding: 10px 18px;
+        border-radius: 3px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+    }
+
+    .talk-button:hover {
+        background: var(--button-hover);
+    }
+
+    .card-footer-button-div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .square {
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-content-profile {
+        text-align: center;
+        order: 2;
+    }
+
+    .bio-text {
+        font-size: 16px;
+    }
+
+    .image-content-profile {
+        margin-left: auto;
+        margin-right: auto;
+        order: 1;
+    }
+
+    .desc-prof {
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .profile-image {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .profile-image:hover {
+        box-shadow: var(--light-box-shadow) 0 50px 50px -50px;
+        transition: 0.3s ease-out;
+    }
+
+    .prof-title {
+        padding-bottom: 1rem;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .experience-text-role {
+        font-size: 22px;
+    }
+
+    .experience-text-company {
+        font-size: 22px;
+    }
+
+    .experience-text-date {
+        font-size: 18px;
+    }
+
+    .experience-text-desc {
+        font-size: 16px;
+    }
+
+    .education-card {
+        text-align: center;
+    }
+
+    .education-card-right {
+        max-width: 100%;
+    }
+
+    .education-card-border {
+        width: 100%;
+    }
+
+    .education-roundedimg {
+        margin-top: 10px;
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .education-text-bullets>ul {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 425px) {
+    input:checked+.slider::after {
+        right: 60.3%;
+        bottom: 20.5%;
+    }
+
+    .slider::after {
+        right: 15.3%;
+        bottom: 22.5%;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-button {
+        font-size: 0.75rem;
+    }
+}

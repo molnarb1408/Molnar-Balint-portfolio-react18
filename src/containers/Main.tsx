@@ -1,21 +1,20 @@
 import { useState, useEffect, useMemo } from "react";
-import Header from "../components/header/Header.tsx";
-import Greeting from "./greeting/Greeting.tsx";
-import Skills from "./skills/Skills.tsx";
-import StackProgress from "./skillProgress/skillProgress.tsx";
-import WorkExperience from "./workExperience/WorkExperience.tsx";
-import Projects from "./projects/Projects.tsx";
-import StartupProject from "./StartupProjects/StartupProject.tsx";
-import Achievement from "./achievement/Achievement.tsx";
-import Footer from "../components/footer/Footer.tsx";
-import Education from "./education/Education.tsx";
-import ScrollToTopButton from "./topbutton/Top.tsx";
-import Profile from "./profile/Profile.tsx";
-import SplashScreen from "./splashScreen/SplashScreen.tsx";
+import Header from "../components/Header.tsx";
+import Greeting from "./Greeting.tsx";
+import Skills from "./Skills.tsx";
+import StackProgress from "./skillProgress.tsx";
+import WorkExperience from "./WorkExperience.tsx";
+import Projects from "./Projects.tsx";
+import StartupProject from "./StartupProject.tsx";
+import Achievement from "./Achievement.tsx";
+import Footer from "../components/Footer.tsx";
+import Education from "./Education.tsx";
+import ScrollToTopButton from "./Top.tsx";
+import Profile from "./Profile.tsx";
+import SplashScreen from "./SplashScreen.tsx";
 import { splashScreen } from "../portfolio.tsx";
 import { StyleProvider } from "../contexts/StyleProvider.tsx";
 import { useLocalStorage } from "../hooks/useLocalStorage.tsx";
-import "./Main.css"; //it must load last to make itt work!!!
 
 const Main = () => {
   const darkPref = useMemo(() => window.matchMedia("(prefers-color-scheme: dark)"), []);

@@ -31,46 +31,47 @@ react-portfolio/
 │   ├── favicon.ico, favicon-16x16.png, favicon-32x32.png
 │   ├── apple-touch-icon.png, safari-pinned-tab.svg
 │   ├── manifest.json
-│   └── profile.json            # GitHub API adatok (fetch.js generálja)
+│   └── profile.json            
 ├── src/
 │   ├── App.tsx / App.css
 │   ├── index.tsx / index.css
-│   ├── portfolio.tsx           # Tartalmi konfiguráció (szövegek, linkek)
+│   ├── portfolio.tsx           
 │   ├── utils.tsx
 │   ├── vite-env.d.ts
+
 │   ├── assets/
-│   │   ├── fonts/               # Agustina.woff, Montserrat-Regular.ttf
-│   │   ├── images/               # webp logók, placeholder.webp, talksCardBack.svg
-│   │   └── lottie/               # splashAnimation, landingPerson, codingPerson, build, email .json
+│   │   ├── fonts/               
+│   │   ├── images/               
+│   │   └── lottie/               
 │   ├── components/
-│   │   ├── achievementCard/     # AchievementCard.tsx / .css
-│   │   ├── button/               # Button.tsx / .css
+│   │   ├── achievementCard/      # AchievementCard.tsx
+│   │   ├── button/               # Button.tsx
 │   │   ├── displayLottie/        # DisplayLottie.tsx
-│   │   ├── educationCard/        # EducationCard.tsx / .css
-│   │   ├── experienceCard/       # ExperienceCard.tsx / .css
-│   │   ├── footer/               # Footer.tsx / .css
-│   │   ├── githubProfileCard/    # GithubProfileCard.tsx / .css
-│   │   ├── githubRepoCard/       # GithubRepoCard.tsx / .css
-│   │   ├── header/               # Header.tsx / .css
-│   │   ├── socialMedia/          # SocialMedia.tsx / .css
-│   │   ├── softwareSkills/       # SoftwareSkill.tsx / .css
-│   │   ├── talkCard/             # TalkCard.tsx / .css
-│   │   └── ToggleSwitch/         # ToggleSwitch.tsx / .css
+│   │   ├── educationCard/        # EducationCard.tsx
+│   │   ├── experienceCard/       # ExperienceCard.tsx
+│   │   ├── footer/               # Footer.tsx
+│   │   ├── githubProfileCard/    # GithubProfileCard.tsx
+│   │   ├── githubRepoCard/       # GithubRepoCard.tsx
+│   │   ├── header/               # Header.tsx
+│   │   ├── socialMedia/          # SocialMedia.tsx
+│   │   ├── softwareSkills/       # SoftwareSkill.tsx
+│   │   ├── talkCard/             # TalkCard.tsx
+│   │   └── ToggleSwitch/         # ToggleSwitch.tsx
 │   ├── containers/
 │   │   ├── Main.tsx / Main.css   # Fő layout, dark mode állapot
-│   │   ├── achievement/          # Achievement.tsx / .css
-│   │   ├── contact/              # Contact.tsx / .css
-│   │   ├── education/            # Education.tsx / .css
-│   │   ├── greeting/             # Greeting.tsx / .css + CV PDF-ek (HU/EN)
-│   │   ├── loading/              # Loading.tsx / loading.css
+│   │   ├── achievement/          # Achievement.tsx
+│   │   ├── contact/              # Contact.tsx
+│   │   ├── education/            # Education.tsx
+│   │   ├── greeting/             # Greeting.tsx
+│   │   ├── loading/              # Loading.tsx 
 │   │   ├── profile/              # Profile.tsx
-│   │   ├── projects/             # Projects.tsx / Project.css
-│   │   ├── skillProgress/        # skillProgress.tsx / Progress.css
-│   │   ├── skills/               # Skills.tsx / Skills.css
-│   │   ├── splashScreen/         # SplashScreen.tsx / .css
-│   │   ├── StartupProjects/      # StartupProject.tsx / .css
-│   │   ├── topbutton/            # Top.tsx / .css
-│   │   └── workExperience/       # WorkExperience.tsx / .css
+│   │   ├── projects/             # Projects.tsx 
+│   │   ├── skillProgress/        # skillProgress.tsx
+│   │   ├── skills/               # Skills.tsx 
+│   │   ├── splashScreen/         # SplashScreen.tsx
+│   │   ├── StartupProjects/      # StartupProject.tsx
+│   │   ├── topbutton/            # Top.tsx
+│   │   └── workExperience/       # WorkExperience.tsx
 │   ├── contexts/
 │   │   ├── StyleContext.tsx
 │   │   └── StyleProvider.tsx
@@ -79,8 +80,10 @@ react-portfolio/
 │   │   ├── useLocalStorage.tsx
 │   │   └── useStyle.tsx
 │   ├── styles/
-│   │   ├── variables.css         # Globális CSS custom property-k (design tokenek)
-│   │   └── shared.css            # Közös, több komponens közt duplikált osztályok (.subTitle, .card-title, .card-subtitle, .card-image)
+│   │   ├── components.css        # Componnents classes
+│   │   ├── containers.css        # Containers classes
+│   │   ├── variables.css         # Global CSS custom property
+│   │   └── shared.css            # Shared classes
 │   └── types/
 │       ├── AchievementCard.types.ts
 │       ├── Button.types.ts
@@ -91,7 +94,7 @@ react-portfolio/
 │       ├── StyleContextType.ts
 │       └── TalkCard.types.ts
 ├── Dockerfile
-├── fetch.js                      # GitHub GraphQL + Medium RSS adatlekérő build előtt
+├── fetch.js                      # GitHub GraphQL + Medium RSS
 ├── index.html
 ├── netlify.toml
 ├── package.json
@@ -108,16 +111,28 @@ Deployed automatically via Netlify on push to `main`. Node version is pinned via
 
 ## Roadmap
 
+- [x] Update project 
 - [x] Migrate all styling from SCSS to native CSS
 - [x] Replace remaining `any` types with proper typings
 - [x] Fix any errors and dead code
 - [ ] Code-split large bundle (Lottie / animation-heavy chunks)
-- [ ] Update project 
-
 
 # Changelog
 
 All notable changes to this project are documented in this file.
+
+## [0.4.3] - 2026-09-02
+
+### CSS Refactor
+- Consolidated all component CSS into `styles/components.css`.
+- Consolidated all container CSS into `styles/containers.css`.
+- Removed redundant per-component/container CSS files and imports.
+- `App.css` is now the single CSS entry point with deterministic import order: `variables → shared → components → containers`.
+- Kept `index.css` for global/native element styles.
+- Removed unused/redundant styles and resolved CSS class conflicts while preserving the existing appearance.
+- Fixed hidden CSS issues including `StartupProjects`/`shared` class conflicts, `TalkCard` media query handling, and `Skills`/`Greeting` style overlap.
+- `App.tsx` remains unchanged.
+
 
 ## [0.4.2] - 2026-09-01
  
