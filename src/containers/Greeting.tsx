@@ -6,6 +6,7 @@ import Button from "../components/Button.tsx";
 import { illustration, greeting } from "../portfolio.tsx";
 import { useStyle } from "../hooks/useStyle.tsx";
 import CV_hu from '../assets/cv/CV_Molnar_Balint_HU.pdf';
+import CV_en from '../assets/cv/CV_Molnar_Balint_EN.pdf';
 
 export default function Greeting() {
   const { isDark } = useStyle();
@@ -46,7 +47,13 @@ export default function Greeting() {
                     isDownload
                     downloadFile="CV_Molnar_Balint_HU.pdf" className={undefined} newTab={undefined} />
                 )}
-   
+                {greeting.resumeLink && (
+                  <Button
+                    text="Önéletrajz EN"
+                    href={CV_en}
+                    isDownload
+                    downloadFile="CV_Molnar_Balint_EN.pdf" className={undefined} newTab={undefined} />
+                )}
               </div>
             </div>
           </div>
