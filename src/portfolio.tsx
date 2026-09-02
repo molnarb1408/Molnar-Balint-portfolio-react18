@@ -18,10 +18,9 @@ const greeting = {
   username: "Molnár Bálint",
   title: "Üdv, Bálint vagyok!",
   subTitle: (
-    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular és Node.js, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing, JavaFX, Maven, Python és SQL az technológiák."
+    "A nevem Molnár Bálint, köszöntelek a portfólió oldalamon! Magamat, lelkes és elkötelezett fejlesztőként jellemezném, aki frontend és backend technológiák széles skálájában rendelkezik tudással. Frontend területen erősségeim közé tartozik a HTML, CSS, Bootstrap, JavaScript, Angular, React és Vite, illetve a NoSQL adatbázisok használata. Backend oldalról Java, Swing, JavaFX, Maven, Python és SQL az technológiák. Emellett több éves gyakorlati tapasztalattal rendelkezem indie videójáték-fejlesztés terén is (Python/Ren'Py, Godot), a teljes fejlesztési életciklust átfogva a tervezéstől a Steam/itch.io release-ig."
   ),
-  resumeLink:
-    "https://mega.nz/folder/oHoRxABT#3VkrF55q0xR112UNTiBaQg",
+  resumeLink: true,
   displayGreeting: true
 };
 
@@ -51,6 +50,7 @@ const skillsSection = {
     "⚡ SEO optimalizáció implementálása, weboldalak-applikációk számára",
     "⚡ Java applikációk tervezése, fejlesztése",
     "⚡ Adatbázis kezelés, SQL - NoSQL technologiák segítségével",
+    "⚡ Komplex, reszponzív UI/UX rendszerek tervezése videójátékokhoz, több platform és kontrollmód figyelembevételével",
   ],
 
   softwareSkills: [
@@ -183,6 +183,24 @@ const workExperiences = {
   display: true,
   experience: [
     {
+      backgroundColor: [60, 60, 60],
+      role: "Szoftverfejlesztő",
+      company: "Aphyra Games",
+      companylogo: new URL("./assets/images/aphyraGameslogo.webp", import.meta.url).href,
+      date: "2024 Február – 2026 Augusztus",
+      desc: "Teljes értékű indie videójáték fejlesztése, önálló fejlesztői szerepben, a teljes fejlesztési életciklus lefedésével.",
+      descBullets: [
+        "Fejlesztés, tesztelés, hibajavítás, buildelés, lokalizáció pipeline kezelése",
+        "CI/CD Pipeline kialakítása és karbantartása",
+        "Komplex, reszponzív, játékosbarát UI/UX rendszerek tervezése",
+        "UI-, state-management-, input-, transition-, audio- és timing megvalósítása",
+        "Moduláris, karbantartható kód, reusable komponensek, naming convention",
+        "Multimédiás pipeline kezelése (képek, animációk, hangok, videók)",
+        "Cross-platform szemlélet PC / Mobile és Steam Deck -re optimalizálás",
+        "A/B tesztelés és felhasználói visszajelzések alapján történő iteráció",
+      ]
+    },
+    {
       backgroundColor: [226, 92, 76],
       role: "Vállalati weblap készítés",
       company: "Greensense Consulting",
@@ -197,7 +215,19 @@ const workExperiences = {
       ]
     },
     {
-      backgroundColor: [186, 4, 4],
+      backgroundColor: [64, 105, 225],
+      role: "Logisztikai Szakértő",
+      company: "Autoliv Kft.",
+      companylogo: new URL("./assets/images/autolivLogo.webp", import.meta.url).href,
+      date: "2024-01 – 2024-02",
+      desc: "Logisztikai szakértőként dolgoztam az Autoliv Kft. sopronkövesdi telephelyén, az autóipari beszállítói szektorban.",
+      descBullets: [
+        "Bizonyított képesség a gyors tanulásra és az új helyzetekhez való alkalmazkodásra",
+        "Kiváló kommunikációs készségek, szóban és írásban egyaránt",
+      ]
+    },
+    {
+      backgroundColor: [226, 50, 50],
       role: "Eszkalációs Menedzser (logisztika - autóipar)",
       company: "Provertha Zrt.",
       companylogo: new URL("./assets/images/proverthaLogo.webp", import.meta.url).href,
@@ -220,7 +250,54 @@ const workExperiences = {
         "Figyelemmel kísértem a projekteket, hogy megfeleljenek a jogi és szabályozási előírásoknak.",
         "Részletes jelentéseket készítettem a megfelelési mutatókról, tájékoztatva a felsővezetést a főbb trendekről és a javításra szoruló területekről.",
       ]
-    }
+    },
+    {
+      backgroundColor: [46, 139, 87],
+      role: "Pénzügyi specialista (Egyetemi munka)",
+      company: "ProITCon",
+      companylogo: new URL("./assets/images/proitconLogo.webp", import.meta.url).href,
+      date: "2022-01 – 2022-09",
+      desc: "Egyetemi munka keretében pénzügyi specialistaként vettem részt cégek közötti projektek megvalósításában.",
+      descBullets: [
+        "Együttműködtem különböző cégek szakembereivel a projektek céljainak időben és költségkereten belüli eléréséhez.",
+        "Növeltem az ügyfél-elégedettséget proaktív problémamegoldással és hatékony panaszkezeléssel.",
+        "Aktívan hozzájárultam a kapcsolatiháló bővítéséhez a rendelkezésre álló közösségi médiaplatformokon.",
+      ]
+    },
+    {
+      backgroundColor: [70, 130, 180],
+      role: "Interpreter – Angol tolmács (Diák munka)",
+      company: "FLEX Sárvár",
+      companylogo: new URL("./assets/images/flexLogo.webp", import.meta.url).href,
+      date: "2019-05 – 2019-08",
+      desc: "Diákmunka keretében angol tolmácsként segítettem az üzleti partnerek közötti kommunikációt.",
+      descBullets: [
+        "Lehetővé tettem az üzleti partnerek közötti egyértelmű kommunikációt a bonyolult technikai zsargon közérthető nyelvezetre fordításával.",
+        "Javítottam az ügyfélkommunikációt pontos és időben történő tolmácsolási szolgáltatásokkal megbeszélések és konferenciák során.",
+      ]
+    },
+    {
+      backgroundColor: [229, 39, 39],
+      role: "Logisztikai ügyintéző (Gyakornok)",
+      company: "Galambos Logistic Kft.",
+      companylogo: new URL("./assets/images/galambosLogo.webp", import.meta.url).href,
+      date: "2017-09 – 2018-06",
+      desc: "Gyakornokként logisztikai ügyintézői feladatokat láttam el a vépi telephelyen.",
+      descBullets: [
+        "Részletes nyilvántartást vezettem a szállítmányokról, nyomon követve azok előrehaladását a rendelés leadásától a végső kézbesítésig.",
+      ]
+    },
+    {
+      backgroundColor: [178, 234, 74],
+      role: "Logisztikai ügyintéző (Gyakornok)",
+      company: "Sága Foods Zrt.",
+      companylogo: new URL("./assets/images/sagaLogo.webp", import.meta.url).href,
+      date: "2016-06 – 2016-08",
+      desc: "Gyakornokként raktárszervezési feladatokban vettem részt a sárvári telephelyen.",
+      descBullets: [
+        "A raktárszerveződés javításával foglalkoztam, egyértelmű címkézési rendszer és hatékony tárolási elrendezés fenntartásával.",
+      ]
+    },
   ]
 };
 
@@ -230,6 +307,17 @@ const bigProjects = {
   title: "Nagyobb Projekjeim",
   subtitle: "NÉHÁNY CÉGEK ÁLTAL MEGRENDELT, ILLETVE SAJÁT KÉSZÍTÉSŰ PROJECT",
   projects: [
+    {
+      image: new URL("./assets/images/fmdLogo.webp", import.meta.url).href,
+      projectName: "For My Darling",
+      projectDesc: "Vizuális novella az Aphyra Games kiadásában, Python / Ren'Py motorral fejlesztve, Steamen és itch.io-n elérhető. Teljes körű fejlesztői szerepet töltöttem be: a fő játékmenet mellett egy önálló dungeon crawler minijátékot is kidolgoztam (irány- és mozgásrendszer, HUD, debug minimap, eseménynapló rendszer). Emellett kezeltem a Butler CLI-n keresztüli itch.io build- és release-folyamatot, a több ezer elemből álló képi asset pipeline optimalizálását, illetve a márka- és megjelenés-menedzsmentet (press kit, arculati útmutató).",
+      footerLink: [
+        {
+          name: "Aphyra Games",
+          url: ""
+        }
+      ]
+    },
     {
       image: new URL("./assets/images/greenssenseCroppedLogo.webp", import.meta.url).href,
       projectName: "GreenSense.hu",
@@ -293,7 +381,7 @@ const achievementSection = {
     {
       title: "Ruander - Backend fejlesztő",
       subtitle:
-        "Folyamatban lévő Backend fejlesztői képzés!",
+        "Sikeresen elvégzett Java Backend fejlesztői képzés!",
       image: new URL("./assets/images/ruanderLogo.webp", import.meta.url).href,
       imageAlt: "Ruander Logo",
       footerLink: [

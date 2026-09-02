@@ -6,8 +6,8 @@ import SocialMedia from "../../components/socialMedia/SocialMedia.tsx";
 import Button from "../../components/button/Button.tsx";
 import { illustration, greeting } from "../../portfolio.tsx";
 import { useStyle } from "../../hooks/useStyle";
-import CV_hu from './CV_Molnar_Balint_HU.pdf';
-import CV_en from './CV_Molnar_Balint_EN.pdf';
+import CV_hu from '../../assets/cv/CV_Molnar_Balint_HU.pdf';
+import CV_en from '../../assets/cv/CV_Molnar_Balint_EN.pdf';
 
 export default function Greeting() {
   const { isDark } = useStyle();
